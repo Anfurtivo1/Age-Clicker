@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class ContadorRecursos : MonoBehaviour
 {
-    public int recursoActual = 0;
     public Text textoRecurso;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -18,10 +17,9 @@ public class ContadorRecursos : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            recursoActual++;
+            GuardarCargar.instancia.partida.recursosActuales++;
         }
-
-        string recurso = recursoActual.ToString();
+        string recurso = GuardarCargar.instancia.partida.recursosActuales.ToString();
         textoRecurso.text = recurso;
     }
 }
