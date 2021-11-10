@@ -3,158 +3,81 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Xml;
 using System.Xml.Serialization;
+using UnityEngine.SceneManagement;
 using System.IO;
 using System;
+using UnityEngine.UI;
 
 public class GuardarCargar : MonoBehaviour
 {
+    private ContadorRecursos contadorRecursos;
     public static GuardarCargar instancia;
-    public Juego partida;
-    public bool haCargado;
+    [HideInInspector] public Juego partida;
+    //public bool haCargado;
     private string rutaAGuardar;
+    public Text textoRecurso;
+    public Text textoRecursoTotal;
+    [HideInInspector] public int recursosTotales;
+    [HideInInspector] public int recursosTotalesPartidaAnterior;
     //private BinaryFormatter formateador;
 
     private void Awake()
     {
         instancia = this;
-        cargarPartida();
+        //cargarPartida();
     }
 
     private void Start()
     {
-        if (true)
-        {
-
-        }
+        
     }
 
     public void guardarPartida()
     {
         rutaAGuardar = Application.persistentDataPath+"/" + partida.nombrePartida+".aock";//Como va a ser multiplataforma, usamos esto
+
+        /*if (File.Exists(rutaAGuardar))
+        {
+            Si el archivo existe, preguntar si se quiere sobreescribir, en caso afirmativo, se sobreescribe
+        }*/
+        int cantidadRecursos = Int32.Parse(textoRecurso.text.ToString());
+        partida.nivelActual = SceneManager.GetActiveScene().name;
+        partida.nombrePartida = "partida1";
+        partida.recursosActuales = cantidadRecursos;
+        recursosTotales = int.Parse(textoRecursoTotal.text.ToString());
+        partida.recursosTotales = recursosTotales;
+        
+        partida.nivelPrestigio = 0;
+        partida.edificiosTier1 = 0;
+        partida.edificiosTier2 = 0;
+        partida.edificiosTier3 = 0;
+        partida.edificiosTier4 = 0;
+        partida.edificiosTier5 = 0;
+
         var serializador = new XmlSerializer(typeof(Juego));
         FileStream stream = new FileStream(rutaAGuardar, FileMode.Create);
-        serializador.Serialize(stream,partida);
+        serializador.Serialize(stream, partida);
         stream.Close();
         Debug.Log("Guardado");
+
     }
 
     public void cargarPartida()
     {
         rutaAGuardar = Application.persistentDataPath + "/" + partida.nombrePartida + ".aock";
+        Debug.Log(rutaAGuardar);
         if (File.Exists(rutaAGuardar))
         {
             var serializador = new XmlSerializer(typeof(Juego));
             FileStream stream = new FileStream(rutaAGuardar, FileMode.Open);
             partida = serializador.Deserialize(stream) as Juego;
             stream.Close();
-            haCargado = true;
+            string nivel = partida.nivelActual;
+            Debug.Log(nivel);
+            SceneManager.LoadScene(nivel);
+            recursosTotales = partida.recursosTotales;
+            textoRecursoTotal.text = recursosTotales.ToString();
             Debug.Log("Cargado");
         }
     }
-
-    /*public void guardarPartida()
-    {
-        var json = JsonUtility.ToJson(partida);
-
-        using (FileStream stream = new FileStream(rutaAGuardar, FileMode.Create))
-        {
-            formateador.Serialize(stream, json);
-        }
-    }
-
-    public void cargarPartida()
-    {
-        if (!File.Exists(rutaAGuardar))
-        {
-            partida = new Juego();
-            partida.recursosActuales = 50;
-            guardarPartida();
-        }
-        using (FileStream stream = new FileStream(rutaAGuardar, FileMode.Open))
-        {
-            String InfoPartida = (string)formateador.Deserialize(stream);
-            partida = JsonUtility.FromJson<Juego>(InfoPartida);
-        }
-    }*/
-
-    /*public static bool guardar(string nombrePartida, Juego partidaAGuardar)
-    {
-        BinaryFormatter formateador = getFormateador();
-
-        if (Directory.Exists(Application.persistentDataPath + "/partidas"))
-        {
-            Directory.CreateDirectory(Application.persistentDataPath + "/partidas");
-        }
-        string rutaAGuardar = Application.persistentDataPath + "/partidas" + nombrePartida + ".save";
-
-        FileStream partida = File.Create(rutaAGuardar);
-
-        formateador.Serialize(partida, partidaAGuardar);
-
-        partida.Close();
-
-        return true;
-
-    }
-
-    public static object cargarPartida (string ruta)
-    {
-        if (!File.Exists(ruta))
-        {
-            return null;
-
-        }
-
-        BinaryFormatter formateador = getFormateador();
-        FileStream partida = File.Open(ruta, FileMode.Open);
-
-        try
-        {
-            object partidaACargar = formateador.Deserialize(partida);
-            partida.Close();
-            return partidaACargar;
-        }
-        catch (Exception)
-        {
-            Debug.LogError("No se ha podido cargar la partida en "+ruta);
-            partida.Close();
-            return null;
-        }
-
-
-    }
-
-
-    public static BinaryFormatter getFormateador()
-    {
-        BinaryFormatter formateador = new BinaryFormatter();
-
-        return formateador;
-    }*/
-
-
-
-
-
-    /*public static List<Juego> partidasGuardadas = new List<Juego>();
-
-    public static void guardarPartida()
-    {
-        partidasGuardadas.Add(Juego.partidaActual);
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/partidasGuardadas.gd");
-        bf.Serialize(file, GuardarCargar.partidasGuardadas);
-        file.Close();
-    }
-
-    public static void cargarPartidas()
-    {
-        if (File.Exists(Application.persistentDataPath + "/savedGames.gd"))
-        {
-            BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
-            GuardarCargar.partidasGuardadas = (List<Juego>)bf.Deserialize(file);
-            file.Close();
-        }
-    }*/
 }
