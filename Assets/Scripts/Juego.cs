@@ -5,14 +5,32 @@ using UnityEngine;
 [System.Serializable]
 public class Juego 
 {
-    public string idPartida;
     public string nombrePartida;
     public int recursosActuales;
+    public int recursosTotales;
+    public int nivelPrestigio;
+    public string nivelActual;
+
+    public int edificiosTier1;
+    public int edificiosTier2;
+    public int edificiosTier3;
+    public int edificiosTier4;
+    public int edificiosTier5;
     //Añadir una lista de ID de mejoras donde si hay 5 mejoras por nivel, en el primer nivel del id 1 al 5, en el segundo del 6 al 10, etc
 
-    public Juego(int recursosActuales)
+    public Juego(int recursosActuales, int recursosTotales, int nivelPrestigio, string nivelActual, 
+                 int edificiosTier1, int edificiosTier2, int edificiosTier3, int edificiosTier4, int edificiosTier5)
     {
         this.recursosActuales = recursosActuales;
+        this.recursosTotales = recursosTotales;
+        this.nivelPrestigio = nivelPrestigio;
+        this.nivelActual = nivelActual;
+
+        this.edificiosTier1 = edificiosTier1;
+        this.edificiosTier2 = edificiosTier2;
+        this.edificiosTier3 = edificiosTier1;
+        this.edificiosTier4 = edificiosTier4;
+        this.edificiosTier5 = edificiosTier5;
     }
 
     public Juego()
