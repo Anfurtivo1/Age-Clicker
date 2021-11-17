@@ -17,6 +17,7 @@ public class GuardarCargar : MonoBehaviour
     private string rutaAGuardar;
     public Text textoRecurso;
     public Text textoRecursoTotal;
+    public Text nombreJugador;
     [HideInInspector] public int recursosTotales;
     [HideInInspector] public int recursosTotalesPartidaAnterior;
     //private BinaryFormatter formateador;

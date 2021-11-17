@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class MenuOpciones : MonoBehaviour
 {
     [SerializeField]Vector2 spacing;
-
     Button botonPrincipal;
     MenuOpcionesItem[] items;
     bool expandido = false;
@@ -28,7 +27,7 @@ public class MenuOpciones : MonoBehaviour
         
 
         posicionBotonPrincipal = botonPrincipal.transform.position;
-
+        
         resetearPosicion();
 
     }
@@ -43,6 +42,7 @@ public class MenuOpciones : MonoBehaviour
 
     private void cambiarEstadoMenu()
     {
+
         expandido = !expandido;
 
         if (expandido)
