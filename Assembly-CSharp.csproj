@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Juego.cs" />
     <Compile Include="Assets\Scripts\ContadorRecursos.cs" />
     <Compile Include="Assets\Scripts\MenuOpcionesItem.cs" />
+    <Compile Include="Assets\Scripts\EdificiosManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
