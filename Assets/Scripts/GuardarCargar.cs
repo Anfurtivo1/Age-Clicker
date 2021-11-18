@@ -24,13 +24,16 @@ public class GuardarCargar : MonoBehaviour
 
     private void Awake()
     {
+
         instancia = this;
         //cargarPartida();
     }
 
     private void Start()
     {
-        
+        partida.recursosActuales = 0;
+        instancia.textoRecurso.text = "0";
+        textoRecurso.text = "0";
     }
 
     public void guardarPartida()
