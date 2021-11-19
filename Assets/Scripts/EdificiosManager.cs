@@ -12,6 +12,7 @@ public class EdificiosManager : MonoBehaviour
     public Text contadorEdificios3;
     public Text contadorEdificios4;
     public Text contadorEdificios5;
+    public int costeEdificio1 = 10;
 
     int prestigio = 1;
     int edificios1;
@@ -64,11 +65,10 @@ public class EdificiosManager : MonoBehaviour
 
     public void comprarEdificio1_1()
     {
-        int coste = 10;
         int recursos = int.Parse(recursosActuales.text.ToString());
-        if (recursos>=coste)
+        if (recursos>= costeEdificio1)
         {
-            recursos = recursos - coste;
+            recursos = recursos - costeEdificio1;
             recursosActuales.text = ""+recursos;
             GuardarCargar.instancia.partida.recursosActuales = recursos;
 
@@ -76,6 +76,8 @@ public class EdificiosManager : MonoBehaviour
             cantidadEdificiosActuales++;
             contadorEdificios1.text = ""+cantidadEdificiosActuales;
             Debug.Log("Has comprado un edificio");
+            costeEdificio1 = costeEdificio1 * 5;
+            Debug.Log("Edificio ahora cuesta "+ costeEdificio1);
         }
         else
         {
