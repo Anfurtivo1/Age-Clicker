@@ -12,7 +12,8 @@ public class EdificiosManager : MonoBehaviour
     public Text contadorEdificios3;
     public Text contadorEdificios4;
     public Text contadorEdificios5;
-    public int costeEdificio1 = 10;
+    public Text costeEdificios1;
+    //public int costeEdificio1 = 10;
 
     int prestigio = 1;
     int edificios1;
@@ -29,7 +30,7 @@ public class EdificiosManager : MonoBehaviour
 
     IEnumerator sumarRecursosEdificios()
     {
-        yield return new WaitForSecondsRealtime(8);
+        yield return new WaitForSecondsRealtime(1);
 
         edificios1 = int.Parse(contadorEdificios1.text.ToString());
         edificios2 = int.Parse(contadorEdificios2.text.ToString());
@@ -66,6 +67,7 @@ public class EdificiosManager : MonoBehaviour
     public void comprarEdificio1_1()
     {
         int recursos = int.Parse(recursosActuales.text.ToString());
+        int costeEdificio1 = int.Parse(costeEdificios1.text.ToString());
         if (recursos>= costeEdificio1)
         {
             recursos = recursos - costeEdificio1;
@@ -76,7 +78,8 @@ public class EdificiosManager : MonoBehaviour
             cantidadEdificiosActuales++;
             contadorEdificios1.text = ""+cantidadEdificiosActuales;
             Debug.Log("Has comprado un edificio");
-            costeEdificio1 = costeEdificio1 * 5;
+            costeEdificio1 = costeEdificio1 * 2;
+            costeEdificios1.text = ""+costeEdificio1;
             Debug.Log("Edificio ahora cuesta "+ costeEdificio1);
         }
         else
