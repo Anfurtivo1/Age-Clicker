@@ -17,6 +17,8 @@ public class GuardarCargar : MonoBehaviour
     private string rutaAGuardar;
     public Text textoRecurso;
     public Text textoRecursoTotal;
+    public Text cantidadEdificiosTier1;
+    public Text costeEdifTier1;
     public Text nombreJugador;
     [HideInInspector] public int recursosTotales;
     [HideInInspector] public int recursosTotalesPartidaAnterior;
@@ -50,13 +52,19 @@ public class GuardarCargar : MonoBehaviour
         partida.recursosActuales = cantidadRecursos;
         recursosTotales = int.Parse(textoRecursoTotal.text.ToString());
         partida.recursosTotales = recursosTotales;
-        
+
+        int edificiosTier1 = int.Parse(cantidadEdificiosTier1.text.ToString());
+
+        int costeEdificiosTier1 = int.Parse(costeEdifTier1.text.ToString());
+
         partida.nivelPrestigio = 0;
-        partida.edificiosTier1 = 0;
+        partida.edificiosTier1 = edificiosTier1;
         partida.edificiosTier2 = 0;
         partida.edificiosTier3 = 0;
         partida.edificiosTier4 = 0;
         partida.edificiosTier5 = 0;
+
+        partida.costeEdificiosTier1 = costeEdificiosTier1;
 
         var serializador = new XmlSerializer(typeof(Juego));
         FileStream stream = new FileStream(rutaAGuardar, FileMode.Create);
@@ -78,9 +86,14 @@ public class GuardarCargar : MonoBehaviour
             stream.Close();
             string nivel = partida.nivelActual;
             Debug.Log(nivel);
-            SceneManager.LoadScene(nivel);
+            //SceneManager.LoadScene(nivel);
+            textoRecurso.text =""+ partida.recursosActuales;
             recursosTotales = partida.recursosTotales;
             textoRecursoTotal.text = recursosTotales.ToString();
+
+            cantidadEdificiosTier1.text =""+partida.edificiosTier1;
+
+            costeEdifTier1.text = "" + partida.costeEdificiosTier1;
             Debug.Log("Cargado");
         }
     }
