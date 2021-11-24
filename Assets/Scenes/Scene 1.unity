@@ -1796,7 +1796,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 714780558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0256d4f13dfd1fb4086d012584c4829c, type: 3}
+  m_Script: {fileID: 11500000, guid: db28c5ed1fca4b34ba30f9ee38cf13a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   partida:
@@ -4902,9 +4902,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2103500236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc3a88dade6d16d4a927cec920a5aa7c, type: 3}
+  m_Script: {fileID: 11500000, guid: 19599ef6d4163f84a87d4b085c8c9785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recursosTotales: {fileID: 909583450}
+  nombreJugador: {fileID: 225746225}
 --- !u!114 &2103500240
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -86,14 +86,34 @@ public class GuardarCargar : MonoBehaviour
             stream.Close();
             string nivel = partida.nivelActual;
             Debug.Log(nivel);
-            //SceneManager.LoadScene(nivel);
-            textoRecurso.text =""+ partida.recursosActuales;
-            recursosTotales = partida.recursosTotales;
+
+            //textoRecurso.text =""+ partida.recursosActuales;
+            //recursosTotales = partida.recursosTotales;
+            //textoRecursoTotal.text = recursosTotales.ToString();
+
+            //cantidadEdificiosTier1.text =""+partida.edificiosTier1;
+
+            //costeEdifTier1.text = "" + partida.costeEdificiosTier1;
+
+            
+
+            PlayerPrefs.SetInt("recursos actuales",partida.recursosActuales);
+            PlayerPrefs.SetInt("recursos totales",partida.recursosTotales);
+
+            PlayerPrefs.SetInt("cantidad edificios tier1",partida.edificiosTier1);
+
+            PlayerPrefs.SetInt("coste edificios tier1",partida.costeEdificiosTier1);
+
+            SceneManager.LoadScene(nivel);
+
+            textoRecurso.text = ""+PlayerPrefs.GetInt("recursos actuales");
+            recursosTotales = PlayerPrefs.GetInt("recursos totales");
             textoRecursoTotal.text = recursosTotales.ToString();
 
-            cantidadEdificiosTier1.text =""+partida.edificiosTier1;
+            cantidadEdificiosTier1.text =""+PlayerPrefs.GetInt("cantidad edificios tier1");
 
-            costeEdifTier1.text = "" + partida.costeEdificiosTier1;
+            costeEdifTier1.text = "" + PlayerPrefs.GetInt("coste edificios tier1");
+
             Debug.Log("Cargado");
         }
     }

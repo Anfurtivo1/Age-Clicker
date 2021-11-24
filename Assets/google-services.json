@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "788016365212",
+    "project_id": "age-of-clicks",
+    "storage_bucket": "age-of-clicks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788016365212:android:6f7a9ac299d19b640d7759",
+        "android_client_info": {
+          "package_name": "com.AndresSanchezJuarez.AgeOfClick"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788016365212-nsrn8hqsqi7uod4ngcp5bh928n1mefp3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgFYldmPGz09w919Tvyre1VbwOFfkMmuU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788016365212-nsrn8hqsqi7uod4ngcp5bh928n1mefp3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

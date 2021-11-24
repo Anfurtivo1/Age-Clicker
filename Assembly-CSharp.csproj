@@ -56,13 +56,30 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\GuardarCargar.cs" />
-    <Compile Include="Assets\Scripts\Utils.cs" />
+    <Compile Include="Assets\Scripts\EdificiosManager.cs" />
     <Compile Include="Assets\Scripts\MenuOpciones.cs" />
     <Compile Include="Assets\Scripts\Juego.cs" />
     <Compile Include="Assets\Scripts\ContadorRecursos.cs" />
     <Compile Include="Assets\Scripts\MenuOpcionesItem.cs" />
-    <Compile Include="Assets\Scripts\EdificiosManager.cs" />
+    <Compile Include="Assets\Scripts\Utils.cs" />
+    <Compile Include="Assets\Scripts\GuardarCargar.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Firebase\Plugins\x86_64\FirebaseCppFirestore.dll" />
+    <None Include="Assets\Parse\Plugins\Unity.Compat.dll" />
+    <None Include="Assets\Firebase\Plugins\Firebase.App.dll" />
+    <None Include="Assets\Parse\Plugins\Unity.Tasks.dll" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-firestore-unity\maven-metadata.xml" />
+    <None Include="Assets\Firebase\Plugins\x86_64\FirebaseCppApp-8_6_2.dll" />
+    <None Include="Assets\Firebase\Plugins\iOS\Firebase.Firestore.dll" />
+    <None Include="Assets\Firebase\Plugins\Firebase.TaskExtension.dll" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
+    <None Include="Assets\Firebase\Plugins\Firebase.Firestore.dll" />
+    <None Include="Assets\Parse\Plugins\dotNet45\Unity.Compat.dll" />
+    <None Include="Assets\Firebase\Plugins\Firebase.Platform.dll" />
+    <None Include="Assets\Parse\Plugins\dotNet45\Unity.Tasks.dll" />
+    <None Include="Assets\Firebase\Plugins\Google.MiniJson.dll" />
+    <None Include="Assets\Firebase\Plugins\iOS\Firebase.App.dll" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -289,6 +306,27 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.App">
+      <HintPath>Assets\Firebase\Plugins\Firebase.App.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Firestore">
+      <HintPath>Assets\Firebase\Plugins\Firebase.Firestore.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Tasks">
+      <HintPath>Assets\Parse\Plugins\dotNet45\Unity.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.TaskExtension">
+      <HintPath>Assets\Firebase\Plugins\Firebase.TaskExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.MiniJson">
+      <HintPath>Assets\Firebase\Plugins\Google.MiniJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Platform">
+      <HintPath>Assets\Firebase\Plugins\Firebase.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Compat">
+      <HintPath>Assets\Parse\Plugins\dotNet45\Unity.Compat.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\Unity\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
