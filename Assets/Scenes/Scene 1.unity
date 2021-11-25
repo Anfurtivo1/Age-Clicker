@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.2, y: -6.6}
+  m_AnchoredPosition: {x: 67.5, y: -3.3}
   m_SizeDelta: {x: 63.23, y: 30.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1359244
@@ -234,13 +234,14 @@ RectTransform:
   m_Children:
   - {fileID: 975700648}
   - {fileID: 613313192}
+  - {fileID: 661222624}
   m_Father: {fileID: 1816435001}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 449.2, y: 106.00001}
-  m_SizeDelta: {x: 207.27, y: 30}
+  m_AnchoredPosition: {x: 442.17, y: 100.6}
+  m_SizeDelta: {x: 193.21, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &36899522
 MonoBehaviour:
@@ -285,7 +286,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 36899523}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2103500240}
+        m_TargetAssemblyTypeName: EdificiosManager, Assembly-CSharp
+        m_MethodName: comprarEdificio3_1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &36899523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,8 +319,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f50217e4f10c22e4ebd4917be91e5671, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -741,7 +754,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Edificio 4
+  m_Text: Artesanos
 --- !u!222 &175019211
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -784,7 +797,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.8, y: -6.4}
+  m_AnchoredPosition: {x: 69.9, y: -6.4}
   m_SizeDelta: {x: 63.23, y: 30.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180572392
@@ -1227,13 +1240,14 @@ RectTransform:
   m_Children:
   - {fileID: 175019209}
   - {fileID: 828485507}
+  - {fileID: 2122578837}
   m_Father: {fileID: 1816435001}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 449.2, y: 76}
-  m_SizeDelta: {x: 207.27, y: 30}
+  m_AnchoredPosition: {x: 442.16, y: 67.1}
+  m_SizeDelta: {x: 193.2, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &416577715
 MonoBehaviour:
@@ -1278,7 +1292,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 416577716}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2103500240}
+        m_TargetAssemblyTypeName: EdificiosManager, Assembly-CSharp
+        m_MethodName: comprarEdificio4_1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &416577716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,8 +1325,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 295cb16ada466fb42b4bafb0a12fa28d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1367,7 +1393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1387,7 +1413,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Edificio 2
+  m_Text: Cultivos
 --- !u!222 &420185829
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1434,8 +1460,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 449.19995, y: 165.99998}
-  m_SizeDelta: {x: 207.27, y: 30}
+  m_AnchoredPosition: {x: 442.17, y: 165.99998}
+  m_SizeDelta: {x: 193.21, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &428835832
 MonoBehaviour:
@@ -1513,8 +1539,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 9ba910892a12f8b47b3b82f70294d817, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1723,7 +1749,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.799896, y: -7.3}
+  m_AnchoredPosition: {x: 68.3, y: -7.3}
   m_SizeDelta: {x: 63.23, y: 30.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &613313193
@@ -1767,6 +1793,166 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613313191}
+  m_CullTransparentMesh: 1
+--- !u!1 &633274394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633274395}
+  - component: {fileID: 633274397}
+  - component: {fileID: 633274396}
+  m_Layer: 5
+  m_Name: CosteEdificio5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &633274395
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633274394}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 998187583}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -61.51, y: -3.3}
+  m_SizeDelta: {x: 70.19, y: 18}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &633274396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633274394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '50
+
+'
+--- !u!222 &633274397
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633274394}
+  m_CullTransparentMesh: 1
+--- !u!1 &661222623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 661222624}
+  - component: {fileID: 661222626}
+  - component: {fileID: 661222625}
+  m_Layer: 5
+  m_Name: CosteEdificio3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &661222624
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661222623}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 36899521}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -59.6, y: 0}
+  m_SizeDelta: {x: 70.19, y: 18}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &661222625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661222623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 30
+--- !u!222 &661222626
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661222623}
   m_CullTransparentMesh: 1
 --- !u!1 &714780558
 GameObject:
@@ -1823,14 +2009,31 @@ MonoBehaviour:
     edificiosTier4: 0
     edificiosTier5: 0
     costeEdificiosTier1: 0
+    costeEdificiosTier2: 0
+    costeEdificiosTier3: 0
+    costeEdificiosTier4: 0
+    costeEdificiosTier5: 0
     mejora1_1_Activada: 0
     mejora2_1_Activada: 0
     mejora3_1_Activada: 0
+    mejora1_2_Activada: 0
+    mejora2_2_Activada: 0
+    mejora3_2_Activada: 0
     cantidadSiguienteNivelAscension: 0
+  cantidadPuntosAscension: {fileID: 1204798149}
+  cantidadSiguienteAscension: 0
   textoRecurso: {fileID: 1870974950}
   textoRecursoTotal: {fileID: 909583450}
   cantidadEdificiosTier1: {fileID: 180572392}
   costeEdifTier1: {fileID: 2017086827}
+  cantidadEdificiosTier2: {fileID: 1232159109}
+  costeEdifTier2: {fileID: 1911988520}
+  cantidadEdificiosTier3: {fileID: 613313193}
+  costeEdifTier3: {fileID: 661222625}
+  cantidadEdificiosTier4: {fileID: 828485508}
+  costeEdifTier4: {fileID: 2122578838}
+  cantidadEdificiosTier5: {fileID: 1359244}
+  costeEdifTier5: {fileID: 633274396}
   nombreJugador: {fileID: 225746225}
   recursosTotales: 0
   recursosTotalesPartidaAnterior: 0
@@ -2161,7 +2364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.799896, y: -6.4}
+  m_AnchoredPosition: {x: 64.985, y: -4.9}
   m_SizeDelta: {x: 63.23, y: 30.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828485508
@@ -2543,7 +2746,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Edificio 3
+  m_Text: 'Caza
+
+'
 --- !u!222 &975700650
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2584,13 +2789,14 @@ RectTransform:
   m_Children:
   - {fileID: 1511865712}
   - {fileID: 1359243}
+  - {fileID: 633274395}
   m_Father: {fileID: 1816435001}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 449.19028, y: 46}
-  m_SizeDelta: {x: 207.27, y: 30}
+  m_AnchoredPosition: {x: 442.83002, y: 33.2}
+  m_SizeDelta: {x: 193.21, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998187584
 MonoBehaviour:
@@ -2635,7 +2841,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 998187585}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2103500240}
+        m_TargetAssemblyTypeName: EdificiosManager, Assembly-CSharp
+        m_MethodName: comprarEdificio5_1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &998187585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2656,8 +2874,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 9c81c4acbae8ad44ebc9729c3387e475, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2866,7 +3084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.5, y: -6.3}
+  m_AnchoredPosition: {x: 69.1, y: -6.3}
   m_SizeDelta: {x: 63.23, y: 30.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1232159109
@@ -3060,7 +3278,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Edificio 5
+  m_Text: 'Abrigos de pieles
 
 '
 --- !u!222 &1511865714
@@ -4264,8 +4482,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 449.2, y: 136}
-  m_SizeDelta: {x: 207.27, y: 30}
+  m_AnchoredPosition: {x: 442.17, y: 133}
+  m_SizeDelta: {x: 193.21, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1911361214
 MonoBehaviour:
@@ -4310,7 +4528,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1911361215}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2103500240}
+        m_TargetAssemblyTypeName: EdificiosManager, Assembly-CSharp
+        m_MethodName: comprarEdificio2_1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1911361215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4331,8 +4561,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: fd15e3d61a0299847a9d808d8ae06c39, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4383,7 +4613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -68.54001, y: 0}
+  m_AnchoredPosition: {x: -61.51, y: -0.060005}
   m_SizeDelta: {x: 70.19, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1911988520
@@ -4645,7 +4875,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Edificio 1
+  m_Text: Carretilla
 --- !u!222 &1975717851
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4688,7 +4918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -68.54965, y: 0}
+  m_AnchoredPosition: {x: -61.51, y: -0.16001}
   m_SizeDelta: {x: 70.19, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2017086827
@@ -4958,6 +5188,10 @@ MonoBehaviour:
   contadorEdificios4: {fileID: 828485508}
   contadorEdificios5: {fileID: 1359244}
   costeEdificios1: {fileID: 2017086827}
+  costeEdificios2: {fileID: 1911988520}
+  costeEdificios3: {fileID: 661222625}
+  costeEdificios4: {fileID: 2122578838}
+  costeEdificios5: {fileID: 633274396}
   poderEdificio1: 1
   poderEdificio2: 2
   poderEdificio3: 3
@@ -4978,3 +5212,82 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recursosActuales: {fileID: 1870974950}
+--- !u!1 &2122578836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2122578837}
+  - component: {fileID: 2122578839}
+  - component: {fileID: 2122578838}
+  m_Layer: 5
+  m_Name: CosteEdificio4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2122578837
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122578836}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 416577714}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -59.5, y: 0}
+  m_SizeDelta: {x: 70.19, y: 18}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2122578838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122578836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 40
+--- !u!222 &2122578839
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122578836}
+  m_CullTransparentMesh: 1

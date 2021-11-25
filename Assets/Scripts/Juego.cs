@@ -18,42 +18,56 @@ public class Juego
     public int edificiosTier5;
 
     public int costeEdificiosTier1;
+    public int costeEdificiosTier2;
+    public int costeEdificiosTier3;
+    public int costeEdificiosTier4;
+    public int costeEdificiosTier5;
 
     public bool mejora1_1_Activada;
     public bool mejora2_1_Activada;
     public bool mejora3_1_Activada;
 
+    public bool mejora1_2_Activada;
+    public bool mejora2_2_Activada;
+    public bool mejora3_2_Activada;
+
+
     public int cantidadSiguienteNivelAscension;
 
-    //Añadir campos de si esta activado o no, con true o false (mejora1_1 activada true), si esta activada, al cargar la partida
-    //Se cambia el valor del poder del edificio
+public Juego(int recursosActuales, int recursosTotales, int nivelPrestigio, string nivelActual, 
+                int edificiosTier1, int edificiosTier2, int edificiosTier3, int edificiosTier4, int edificiosTier5, 
+                int costeEdificiosTier1, int costeEdificiosTier2, int costeEdificiosTier3, int costeEdificiosTier4, int costeEdificiosTier5,
+                bool mejora1_1_Activada, bool mejora2_1_Activada, bool mejora3_1_Activada, bool mejora1_2_Activada, bool mejora2_2_Activada, bool mejora3_2_Activada,
+                int cantidadSiguienteNivelAscension)
+{
+    this.recursosActuales = recursosActuales;
+    this.recursosTotales = recursosTotales;
+    this.nivelPrestigio = nivelPrestigio;
+    this.nivelActual = nivelActual;
 
-    public Juego(int recursosActuales, int recursosTotales, int nivelPrestigio, string nivelActual, 
-                 int edificiosTier1, int edificiosTier2, int edificiosTier3, int edificiosTier4, int edificiosTier5, 
-                 int costeEdificiosTier1,
-                 bool mejora1_1_Activada, bool mejora2_1_Activada, bool mejora3_1_Activada,
-                 int cantidadSiguienteNivelAscension)
-    {
-        this.recursosActuales = recursosActuales;
-        this.recursosTotales = recursosTotales;
-        this.nivelPrestigio = nivelPrestigio;
-        this.nivelActual = nivelActual;
+    this.edificiosTier1 = edificiosTier1;
+    this.edificiosTier2 = edificiosTier2;
+    this.edificiosTier3 = edificiosTier1;
+    this.edificiosTier4 = edificiosTier4;
+    this.edificiosTier5 = edificiosTier5;
 
-        this.edificiosTier1 = edificiosTier1;
-        this.edificiosTier2 = edificiosTier2;
-        this.edificiosTier3 = edificiosTier1;
-        this.edificiosTier4 = edificiosTier4;
-        this.edificiosTier5 = edificiosTier5;
+    this.costeEdificiosTier1 = costeEdificiosTier1;
+    this.costeEdificiosTier1 = costeEdificiosTier2;
+    this.costeEdificiosTier1 = costeEdificiosTier3;
+    this.costeEdificiosTier1 = costeEdificiosTier4;
+    this.costeEdificiosTier1 = costeEdificiosTier5;
 
-        this.costeEdificiosTier1 = costeEdificiosTier1;
+    this.mejora1_1_Activada = mejora1_1_Activada;
+    this.mejora2_1_Activada = mejora2_1_Activada;
+    this.mejora3_1_Activada = mejora3_1_Activada;
 
-        this.mejora1_1_Activada = mejora1_1_Activada;
-        this.mejora2_1_Activada = mejora2_1_Activada;
-        this.mejora3_1_Activada = mejora3_1_Activada;
+    this.mejora1_2_Activada = mejora1_2_Activada;
+    this.mejora2_2_Activada = mejora2_2_Activada;
+    this.mejora3_2_Activada = mejora3_2_Activada;
 
-        this.cantidadSiguienteNivelAscension = cantidadSiguienteNivelAscension;
+    this.cantidadSiguienteNivelAscension = cantidadSiguienteNivelAscension;
 
-    }
+}
 
     public Juego()
     {
