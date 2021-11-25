@@ -489,7 +489,7 @@ RectTransform:
   m_LocalScale: {x: 1.0001129, y: 1.0001129, z: 1.0001129}
   m_Children: []
   m_Father: {fileID: 1816435001}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 130744582}
   m_Layer: 5
   m_Name: Mejora 1
-  m_TagString: Untagged
+  m_TagString: Mejora1_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -620,7 +620,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 130744583}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2103500241}
+        m_TargetAssemblyTypeName: MejorasManager, Assembly-CSharp
+        m_MethodName: comprarMejoraTier1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &130744583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1001,7 +1013,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1816435001}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1082,7 +1094,7 @@ RectTransform:
   m_Children:
   - {fileID: 495704794}
   m_Father: {fileID: 1816435001}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1796,12 +1808,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 714780558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db28c5ed1fca4b34ba30f9ee38cf13a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 0256d4f13dfd1fb4086d012584c4829c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   partida:
-    nombrePartida: partida1
-    recursosActuales: 90
+    nombrePartida: 
+    recursosActuales: 0
     recursosTotales: 0
     nivelPrestigio: 0
     nivelActual: 
@@ -1811,6 +1823,10 @@ MonoBehaviour:
     edificiosTier4: 0
     edificiosTier5: 0
     costeEdificiosTier1: 0
+    mejora1_1_Activada: 0
+    mejora2_1_Activada: 0
+    mejora3_1_Activada: 0
+    cantidadSiguienteNivelAscension: 0
   textoRecurso: {fileID: 1870974950}
   textoRecursoTotal: {fileID: 909583450}
   cantidadEdificiosTier1: {fileID: 180572392}
@@ -2408,7 +2424,7 @@ RectTransform:
   m_LocalScale: {x: 1.0001129, y: 1.0001129, z: 1.0001129}
   m_Children: []
   m_Father: {fileID: 1816435001}
-  m_RootOrder: 14
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3085,7 +3101,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1816435001}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3167,7 +3183,7 @@ RectTransform:
   - {fileID: 1942580694}
   - {fileID: 1685500350}
   m_Father: {fileID: 1816435001}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3219,7 +3235,7 @@ RectTransform:
   m_Children:
   - {fileID: 219166776}
   m_Father: {fileID: 1816435001}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3269,7 +3285,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1561042747}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2103500239}
+        m_TargetAssemblyTypeName: Utils, Assembly-CSharp
+        m_MethodName: ascender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1561042747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4057,13 +4085,13 @@ RectTransform:
   - {fileID: 1870974949}
   - {fileID: 1204798148}
   - {fileID: 1067004688}
+  - {fileID: 909583449}
   - {fileID: 1538374039}
   - {fileID: 225746224}
   - {fileID: 406643134}
   - {fileID: 1561042745}
   - {fileID: 1551064701}
   - {fileID: 102117580}
-  - {fileID: 909583449}
   - {fileID: 998187583}
   - {fileID: 416577714}
   - {fileID: 36899521}
@@ -4858,6 +4886,7 @@ GameObject:
   - component: {fileID: 2103500238}
   - component: {fileID: 2103500239}
   - component: {fileID: 2103500240}
+  - component: {fileID: 2103500241}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4905,6 +4934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19599ef6d4163f84a87d4b085c8c9785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cantidadPuntosAscension: {fileID: 1204798149}
   recursosTotales: {fileID: 909583450}
   nombreJugador: {fileID: 225746225}
 --- !u!114 &2103500240
@@ -4921,9 +4951,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recursosActuales: {fileID: 1870974950}
   recursoTotales: {fileID: 909583450}
+  numeroPuntosPrestigio: {fileID: 1204798149}
   contadorEdificios1: {fileID: 180572392}
   contadorEdificios2: {fileID: 1232159109}
   contadorEdificios3: {fileID: 613313193}
   contadorEdificios4: {fileID: 828485508}
   contadorEdificios5: {fileID: 1359244}
   costeEdificios1: {fileID: 2017086827}
+  poderEdificio1: 1
+  poderEdificio2: 2
+  poderEdificio3: 3
+  poderEdificio4: 4
+  poderEdificio5: 5
+  cantidadSiguienteAscension: 1000
+  prestigio: 1
+--- !u!114 &2103500241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103500236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 879e6fdfda3180048874f8ff4db305ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recursosActuales: {fileID: 1870974950}

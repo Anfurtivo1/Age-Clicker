@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 public class GuardarCargar : MonoBehaviour
 {
-    private ContadorRecursos contadorRecursos;
+    //private ContadorRecursos contadorRecursos;
     public static GuardarCargar instancia;
     [HideInInspector] public Juego partida;
     //public bool haCargado;
@@ -66,6 +66,25 @@ public class GuardarCargar : MonoBehaviour
 
         partida.costeEdificiosTier1 = costeEdificiosTier1;
 
+        Button boton = GameObject.FindGameObjectWithTag("Mejora1_1").GetComponent<Button>();
+
+        if (!boton.interactable)
+        {
+            partida.mejora1_1_Activada = true;
+        }
+
+        //if (boton.interactable)
+        //{
+        //    partida.mejora2_1_Activada = true;
+        //}
+
+        //if (boton.interactable)
+        //{
+        //    partida.mejora3_1_Activada = true;
+        //}
+
+
+
         var serializador = new XmlSerializer(typeof(Juego));
         FileStream stream = new FileStream(rutaAGuardar, FileMode.Create);
         serializador.Serialize(stream, partida);
@@ -86,33 +105,31 @@ public class GuardarCargar : MonoBehaviour
             stream.Close();
             string nivel = partida.nivelActual;
             Debug.Log(nivel);
-
-            //textoRecurso.text =""+ partida.recursosActuales;
-            //recursosTotales = partida.recursosTotales;
-            //textoRecursoTotal.text = recursosTotales.ToString();
-
-            //cantidadEdificiosTier1.text =""+partida.edificiosTier1;
-
-            //costeEdifTier1.text = "" + partida.costeEdificiosTier1;
-
-            
-
-            PlayerPrefs.SetInt("recursos actuales",partida.recursosActuales);
-            PlayerPrefs.SetInt("recursos totales",partida.recursosTotales);
-
-            PlayerPrefs.SetInt("cantidad edificios tier1",partida.edificiosTier1);
-
-            PlayerPrefs.SetInt("coste edificios tier1",partida.costeEdificiosTier1);
-
-            SceneManager.LoadScene(nivel);
-
-            textoRecurso.text = ""+PlayerPrefs.GetInt("recursos actuales");
-            recursosTotales = PlayerPrefs.GetInt("recursos totales");
+            //SceneManager.LoadScene(nivel);
+            textoRecurso.text =""+ partida.recursosActuales;
+            recursosTotales = partida.recursosTotales;
             textoRecursoTotal.text = recursosTotales.ToString();
 
-            cantidadEdificiosTier1.text =""+PlayerPrefs.GetInt("cantidad edificios tier1");
+            cantidadEdificiosTier1.text =""+partida.edificiosTier1;
 
-            costeEdifTier1.text = "" + PlayerPrefs.GetInt("coste edificios tier1");
+            costeEdifTier1.text = "" + partida.costeEdificiosTier1;
+
+            if (partida.mejora1_1_Activada)
+            {
+                Button boton = GameObject.FindGameObjectWithTag("Mejora1_1").GetComponent<Button>();
+                EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 5;
+                boton.interactable = false;
+            }
+
+            if (partida.mejora2_1_Activada)
+            {
+
+            }
+
+            if (partida.mejora3_1_Activada)
+            {
+
+            }
 
             Debug.Log("Cargado");
         }

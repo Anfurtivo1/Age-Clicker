@@ -18,11 +18,21 @@ public class Juego
     public int edificiosTier5;
 
     public int costeEdificiosTier1;
-    //Añadir una lista de ID de mejoras donde si hay 5 mejoras por nivel, en el primer nivel del id 1 al 5, en el segundo del 6 al 10, etc
+
+    public bool mejora1_1_Activada;
+    public bool mejora2_1_Activada;
+    public bool mejora3_1_Activada;
+
+    public int cantidadSiguienteNivelAscension;
+
+    //Añadir campos de si esta activado o no, con true o false (mejora1_1 activada true), si esta activada, al cargar la partida
+    //Se cambia el valor del poder del edificio
 
     public Juego(int recursosActuales, int recursosTotales, int nivelPrestigio, string nivelActual, 
                  int edificiosTier1, int edificiosTier2, int edificiosTier3, int edificiosTier4, int edificiosTier5, 
-                 int costeEdificiosTier1)
+                 int costeEdificiosTier1,
+                 bool mejora1_1_Activada, bool mejora2_1_Activada, bool mejora3_1_Activada,
+                 int cantidadSiguienteNivelAscension)
     {
         this.recursosActuales = recursosActuales;
         this.recursosTotales = recursosTotales;
@@ -36,6 +46,12 @@ public class Juego
         this.edificiosTier5 = edificiosTier5;
 
         this.costeEdificiosTier1 = costeEdificiosTier1;
+
+        this.mejora1_1_Activada = mejora1_1_Activada;
+        this.mejora2_1_Activada = mejora2_1_Activada;
+        this.mejora3_1_Activada = mejora3_1_Activada;
+
+        this.cantidadSiguienteNivelAscension = cantidadSiguienteNivelAscension;
 
     }
 
