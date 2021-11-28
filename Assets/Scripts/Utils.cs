@@ -51,7 +51,7 @@ public class Utils : MonoBehaviour
         int puntosAscension = int.Parse(cantidadPuntosAscension.text.ToString());
         PlayerPrefs.SetInt("puntosAscension", puntosAscension);
         Debug.Log("Se van a guardar: " + puntosAscension);
-        SceneManager.LoadScene("Scene 2", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Scene 1");
 
         int nuevosPuntosAscension = PlayerPrefs.GetInt("puntosAscension");
         Debug.Log("Se han cargado: " + nuevosPuntosAscension);
