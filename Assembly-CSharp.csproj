@@ -62,10 +62,10 @@
     <Compile Include="Assets\Scripts\GuardarCargar.cs" />
     <Compile Include="Assets\Scripts\MenuOpciones.cs" />
     <Compile Include="Assets\Scripts\ScriptPrueba.cs" />
+    <Compile Include="Assets\Scripts\MensajesManager.cs" />
     <Compile Include="Assets\Scripts\Juego.cs" />
     <Compile Include="Assets\Scripts\ContadorRecursos.cs" />
     <Compile Include="Assets\Scripts\MenuOpcionesItem.cs" />
-    <Compile Include="Assets\Scripts\MensajesManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
