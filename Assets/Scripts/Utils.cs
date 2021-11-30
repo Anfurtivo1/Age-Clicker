@@ -15,6 +15,39 @@ public class Utils : MonoBehaviour
     public Text nombreJugador;
     static FirebaseFirestore db;
     Dictionary<string, object> puntuacion;
+    public String mensajeMostrar;
+    private MensajesManager mensaje;
+    private bool accesoFirebase = false;
+
+    public void Start()
+    {
+        //mostrarMensaje();
+        if (SceneManager.GetActiveScene().name == "Scene 2")
+        {
+            mensaje = GameObject.FindGameObjectWithTag("GameManager").GetComponent<MensajesManager>();
+
+        }
+    }
+
+    public void mostrarMensaje()
+    {
+        if (accesoFirebase)
+        {
+            try
+            {
+                obtenerJugadoresRanking();
+                //mensaje.mostrarMensaje(mensajeMostrar);
+            }
+            catch (Exception e)
+            {
+
+                Debug.Log("El error es: "+e.Message);
+            }
+            
+        }
+
+        
+    }
 
     public void pasarNivel()
     {
@@ -58,15 +91,22 @@ public class Utils : MonoBehaviour
 
         CollectionReference usersRef = db.Collection("Ranking");
         usersRef.GetSnapshotAsync().ContinueWithOnMainThread(task => {
-            QuerySnapshot snapshot = task.Result;
-            foreach (DocumentSnapshot document in snapshot.Documents)
-            {
-                Console.WriteLine("Jugador: {0}", document.Id);
-                Dictionary<string, object> documentDictionary = document.ToDictionary();
-                Debug.Log("Nombre del jugador: "+documentDictionary["Nombre del jugador"]);
-                Debug.Log("Recursos Totales: "+documentDictionary["Recursos Totales"]);
-                Debug.Log("");
+        QuerySnapshot snapshot = task.Result;
+        foreach (DocumentSnapshot document in snapshot.Documents)
+        {
+            //Console.WriteLine("Jugador: {0}", document.Id);
+            Dictionary<string, object> documentDictionary = document.ToDictionary();
+
+            mensajeMostrar = mensajeMostrar +" Jugador: " +documentDictionary["Nombre del jugador"];
+            mensajeMostrar = mensajeMostrar +" Con recursos totales: "+ documentDictionary["Recursos Totales"];
+            mensajeMostrar = mensajeMostrar + "\n";
+            
+                //Debug.Log("Nombre del jugador: "+documentDictionary["Nombre del jugador"]);
+                //Debug.Log("Recursos Totales: "+documentDictionary["Recursos Totales"]);
+                //Debug.Log("");
             }
+            mensaje = GameObject.FindGameObjectWithTag("GameManager").GetComponent<MensajesManager>();
+            mensaje.mostrarMensaje(mensajeMostrar);
         });
         
 
@@ -82,13 +122,15 @@ public class Utils : MonoBehaviour
         db = FirebaseFirestore.DefaultInstance;
 
         Guid myuuid = Guid.NewGuid();
-        Debug.Log(myuuid);
+        //Debug.Log(myuuid);
 
         db.Collection("Ranking").Document(myuuid.ToString()).SetAsync(puntuacion).ContinueWith(task => {
             if (task.IsCompleted)
             {
                 Debug.Log("Ranking guardado");
-                obtenerJugadoresRanking();
+                accesoFirebase = true;
+                mostrarMensaje();
+                //obtenerJugadoresRanking();
             }
             else
             {
