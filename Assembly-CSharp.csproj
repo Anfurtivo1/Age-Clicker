@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\EdificiosManager.cs" />
     <Compile Include="Assets\Scripts\GuardarCargar.cs" />
     <Compile Include="Assets\Scripts\MenuOpciones.cs" />
+    <Compile Include="Assets\Scripts\ScriptPrueba.cs" />
     <Compile Include="Assets\Scripts\Juego.cs" />
     <Compile Include="Assets\Scripts\ContadorRecursos.cs" />
     <Compile Include="Assets\Scripts\MenuOpcionesItem.cs" />

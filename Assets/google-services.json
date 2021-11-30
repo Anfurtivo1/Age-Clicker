@@ -2,6 +2,7 @@
   "project_info": {
     "project_number": "788016365212",
     "project_id": "age-of-clicks",
+    "firebase_url":"https://console.firebase.google.com/u/0/project/age-of-clicks/firestore/data",
     "storage_bucket": "age-of-clicks.appspot.com"
   },
   "client": [

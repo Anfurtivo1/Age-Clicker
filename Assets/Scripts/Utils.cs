@@ -5,39 +5,45 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Firebase.Firestore;
 using System;
+using System.Threading.Tasks;
+using Firebase.Extensions;
 
 public class Utils : MonoBehaviour
 {
     public Text cantidadPuntosAscension;
     public Text recursosTotales;
     public Text nombreJugador;
-    FirebaseFirestore db;
+    static FirebaseFirestore db;
     Dictionary<string, object> puntuacion;
 
     public void pasarNivel()
     {
-        puntuacion = new Dictionary<string, object>
-        {
-            {"Recursos Totales",recursosTotales.text.ToString() },
-            {"Nombre del jugador",nombreJugador.text.ToString() },
-        };
-        db = FirebaseFirestore.DefaultInstance;
-        Guid myuuid = Guid.NewGuid();
-        Debug.Log(myuuid);
-        db.Collection("Ranking").Document(myuuid.ToString()).SetAsync(puntuacion).ContinueWith(task =>{
-            if (task.IsCompleted)
-            {
-                Debug.Log("Ranking guardado");
-            }
-            else
-            {
-                Debug.Log("Ranking no guardado");
-            }
-        });
         int totales = int.Parse(recursosTotales.text.ToString());
-        if (totales >= 3079)
+
+        if (totales >= 3000)
         {
+
+            escribirJugadorRanking();
+
+            int puntosAscension = int.Parse(cantidadPuntosAscension.text.ToString());
+            int recursoTotal = int.Parse(recursosTotales.text.ToString());
+
+            PlayerPrefs.SetInt("puntosAscension", puntosAscension);
+            PlayerPrefs.SetInt("recursosTotales", recursoTotal);
+
+            //Debug.Log("Se van a guardar: " + puntosAscension+" puntos de ascension");
+            //Debug.Log("Se van a guardar: " + recursoTotal+" recursos totales");
+
             SceneManager.LoadScene("Scene 2");
+
+            int nuevosPuntosAscension = PlayerPrefs.GetInt("puntosAscension");
+            int nuevosRecursosTotales = PlayerPrefs.GetInt("recursosTotales");
+
+            //Debug.Log("Se han cargado: " + nuevosPuntosAscension +" puntos de ascension");
+            //Debug.Log("Se han cargado: " + nuevosRecursosTotales + " recursos totales");
+
+            //refrescarPuntosAscension(nuevosPuntosAscension);
+            //refrescarRecursosTotales(nuevosRecursosTotales);
         }
         else
         {
@@ -46,19 +52,89 @@ public class Utils : MonoBehaviour
         
     }
 
+    private void obtenerJugadoresRanking()
+    {
+        db = FirebaseFirestore.DefaultInstance;
+
+        CollectionReference usersRef = db.Collection("Ranking");
+        usersRef.GetSnapshotAsync().ContinueWithOnMainThread(task => {
+            QuerySnapshot snapshot = task.Result;
+            foreach (DocumentSnapshot document in snapshot.Documents)
+            {
+                Console.WriteLine("Jugador: {0}", document.Id);
+                Dictionary<string, object> documentDictionary = document.ToDictionary();
+                Debug.Log("Nombre del jugador: "+documentDictionary["Nombre del jugador"]);
+                Debug.Log("Recursos Totales: "+documentDictionary["Recursos Totales"]);
+                Debug.Log("");
+            }
+        });
+        
+
+    }
+
+    private void escribirJugadorRanking()
+    {
+        puntuacion = new Dictionary<string, object>
+            {
+                {"Recursos Totales",recursosTotales.text.ToString() },
+                {"Nombre del jugador",nombreJugador.text.ToString() },
+            };
+        db = FirebaseFirestore.DefaultInstance;
+
+        Guid myuuid = Guid.NewGuid();
+        Debug.Log(myuuid);
+
+        db.Collection("Ranking").Document(myuuid.ToString()).SetAsync(puntuacion).ContinueWith(task => {
+            if (task.IsCompleted)
+            {
+                Debug.Log("Ranking guardado");
+                obtenerJugadoresRanking();
+            }
+            else
+            {
+                Debug.Log("Ranking no guardado");
+            }
+        });
+        
+    }
+
     public void ascender()
     {
         int puntosAscension = int.Parse(cantidadPuntosAscension.text.ToString());
         PlayerPrefs.SetInt("puntosAscension", puntosAscension);
         Debug.Log("Se van a guardar: " + puntosAscension);
+
         SceneManager.LoadScene("Scene 1");
 
         int nuevosPuntosAscension = PlayerPrefs.GetInt("puntosAscension");
         Debug.Log("Se han cargado: " + nuevosPuntosAscension);
-        Text textoPuntosAscension = GameObject.Find("Numero de puntos de ascension").GetComponent<Text>();
+
+        EdificiosManager.instanciaEdificiosManager.prestigio = nuevosPuntosAscension;
+
+    }
+
+    public void refrescarRecursosTotales(int recursosTotales)
+    {
+        //Text textoRecursosTotales = GameObject.Find("Numero de recursos Totales").GetComponent<Text>();
+
+        //textoRecursosTotales.text = "" + recursosTotales;
+
+        //GameObject prueba = GameObject.Find("Prueba").GetComponent<GameObject>();
+
+        ScriptPrueba.instanciaPrueba.recursosTotales = recursosTotales;
+
+    }
+
+    public void refrescarPuntosAscension(int puntosAscension)
+    {
+        //Text textoPuntosAscension = GameObject.Find("Numero de puntos de ascension").GetComponent<Text>();
+
+        //textoPuntosAscension.text = "" + puntosAscension;
         EdificiosManager.instanciaEdificiosManager.numeroPuntosPrestigio.text = "" + puntosAscension;
 
-        //EdificiosManager.instanciaEdificiosManager.prestigio = puntosAscension;
+        //GameObject prueba = GameObject.Find("Prueba").GetComponent<GameObject>();
+
+        ScriptPrueba.instanciaPrueba.puntosAscension = puntosAscension;
 
     }
 

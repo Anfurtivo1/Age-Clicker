@@ -34,7 +34,7 @@ public class EdificiosManager : MonoBehaviour
 
     //public int costeEdificio1 = 10;
 
-    [HideInInspector] public int prestigio = 1;
+    public int prestigio = 1;
     int edificios1;
     int edificios2;
     int edificios3;
@@ -54,6 +54,7 @@ public class EdificiosManager : MonoBehaviour
 
     private void sumarRecursosEdificios()
     {
+        //Nivel 1---------------------------------------------
         if (SceneManager.GetActiveScene().name == "Scene 1")
         {
 
@@ -105,6 +106,7 @@ public class EdificiosManager : MonoBehaviour
             }
         }
 
+        //Nivel 2---------------------------------------------
         if (SceneManager.GetActiveScene().name == "Scene 2")//TODO
         {
 
@@ -159,6 +161,7 @@ public class EdificiosManager : MonoBehaviour
 
     }
 
+    //Nivel 1----------------------------------------------
     public void comprarEdificio1_1()
     {
         int recursos = int.Parse(recursosActuales.text.ToString());
@@ -282,6 +285,7 @@ public class EdificiosManager : MonoBehaviour
         }
     }
 
+    //Nivel 2----------------------------------------------
     public void comprarEdificio1_2()
     {
 
@@ -306,6 +310,93 @@ public class EdificiosManager : MonoBehaviour
     }
 
     public void comprarEdificio5_2()
+    {
+
+    }
+
+    //Nivel 3----------------------------------------------
+    public void comprarEdificio1_3()
+    {
+
+    }
+
+
+    public void comprarEdificio2_3()
+    {
+
+    }
+
+
+    public void comprarEdificio3_3()
+    {
+
+    }
+
+
+    public void comprarEdificio4_3()
+    {
+
+    }
+
+    public void comprarEdificio5_3()
+    {
+
+    }
+
+    //Nivel 4----------------------------------------------
+    public void comprarEdificio1_4()
+    {
+
+    }
+
+
+    public void comprarEdificio2_4()
+    {
+
+    }
+
+
+    public void comprarEdificio3_4()
+    {
+
+    }
+
+
+    public void comprarEdificio4_4()
+    {
+
+    }
+
+    public void comprarEdificio5_4()
+    {
+
+    }
+
+    //Nivel 5----------------------------------------------
+    public void comprarEdificio1_5()
+    {
+
+    }
+
+
+    public void comprarEdificio2_5()
+    {
+
+    }
+
+
+    public void comprarEdificio3_5()
+    {
+
+    }
+
+
+    public void comprarEdificio4_5()
+    {
+
+    }
+
+    public void comprarEdificio5_5()
     {
 
     }
