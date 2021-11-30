@@ -13,6 +13,10 @@ public class Utils : MonoBehaviour
     public Text cantidadPuntosAscension;
     public Text recursosTotales;
     public Text nombreJugador;
+    public GameObject panel;
+    private string txt;
+    public InputField input;
+    public Button botonAceptar;
     static FirebaseFirestore db;
     Dictionary<string, object> puntuacion;
     public String mensajeMostrar;
@@ -21,12 +25,25 @@ public class Utils : MonoBehaviour
 
     public void Start()
     {
+        Button btn = botonAceptar.GetComponent<Button>();
+        btn.onClick.AddListener(cambiarNombre);
         //mostrarMensaje();
         if (SceneManager.GetActiveScene().name == "Scene 2")
         {
             mensaje = GameObject.FindGameObjectWithTag("GameManager").GetComponent<MensajesManager>();
 
         }
+    }
+
+    public void cambiarNombre()
+    {
+        nombreJugador.text = input.text;
+        panel.SetActive(false);
+    }
+
+    public void mostrarPanelCambiarNombre()
+    {
+        panel.SetActive(true);
     }
 
     public void mostrarMensaje()

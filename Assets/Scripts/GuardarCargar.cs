@@ -50,6 +50,7 @@ public class GuardarCargar : MonoBehaviour
 
     public void guardarPartida()
     {
+        partida.nombrePartida = nombreJugador.text;
         rutaAGuardar = Application.persistentDataPath+"/" + partida.nombrePartida+".aock";//Como va a ser multiplataforma, usamos esto
 
         /*if (File.Exists(rutaAGuardar))
