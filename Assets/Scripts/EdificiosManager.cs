@@ -92,8 +92,9 @@ public class EdificiosManager : MonoBehaviour
 
                 recursoTotales.text = "" + recursoTotal;
 
+                Debug.Log("Los recursos totales son: "+ sumaTotal);
 
-                cantidadSiguienteAscension = cantidadSiguienteAscension - recursoTotal;
+                cantidadSiguienteAscension = cantidadSiguienteAscension - sumaTotal;
 
                 if (cantidadSiguienteAscension <= 0)
                 {

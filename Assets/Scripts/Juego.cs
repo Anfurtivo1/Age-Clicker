@@ -34,11 +34,13 @@ public class Juego
 
     public int cantidadSiguienteNivelAscension;
 
+    public int prestigio;
+
 public Juego(int recursosActuales, int recursosTotales, int nivelPrestigio, string nivelActual, 
                 int edificiosTier1, int edificiosTier2, int edificiosTier3, int edificiosTier4, int edificiosTier5, 
                 int costeEdificiosTier1, int costeEdificiosTier2, int costeEdificiosTier3, int costeEdificiosTier4, int costeEdificiosTier5,
                 bool mejora1_1_Activada, bool mejora2_1_Activada, bool mejora3_1_Activada, bool mejora1_2_Activada, bool mejora2_2_Activada, bool mejora3_2_Activada,
-                int cantidadSiguienteNivelAscension)
+                int cantidadSiguienteNivelAscension,int prestigio)
 {
     this.recursosActuales = recursosActuales;
     this.recursosTotales = recursosTotales;
@@ -67,6 +69,7 @@ public Juego(int recursosActuales, int recursosTotales, int nivelPrestigio, stri
 
     this.cantidadSiguienteNivelAscension = cantidadSiguienteNivelAscension;
 
+    this.prestigio = prestigio;
 }
 
     public Juego()
