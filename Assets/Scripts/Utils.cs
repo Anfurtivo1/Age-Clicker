@@ -160,15 +160,22 @@ public class Utils : MonoBehaviour
     public void ascender()
     {
         int puntosAscension = int.Parse(cantidadPuntosAscension.text.ToString());
-        PlayerPrefs.SetInt("puntosAscension", puntosAscension);
-        Debug.Log("Se van a guardar: " + puntosAscension);
 
-        SceneManager.LoadScene("Scene 1");
+        //PlayerPrefs.SetInt("puntosAscension", puntosAscension);
+        //Debug.Log("Se van a guardar: " + puntosAscension);
 
-        int nuevosPuntosAscension = PlayerPrefs.GetInt("puntosAscension");
-        Debug.Log("Se han cargado: " + nuevosPuntosAscension);
+        //SceneManager.LoadScene("Scene 1");
 
-        EdificiosManager.instanciaEdificiosManager.prestigio = nuevosPuntosAscension;
+        //int nuevosPuntosAscension = PlayerPrefs.GetInt("puntosAscension");
+        //Debug.Log("Se han cargado: " + nuevosPuntosAscension);
+        cantidadPuntosAscension.text = ""+0;
+        recursosTotales.text = "" + 0;
+
+        //Debug.Log("puntos de ascension obtenidos: " + puntosAscension);
+
+        EdificiosManager.instanciaEdificiosManager.prestigio = EdificiosManager.instanciaEdificiosManager.prestigio + puntosAscension;
+
+        //Debug.Log("El prestigio ahora es de: " + EdificiosManager.instanciaEdificiosManager.prestigio);
 
     }
 
@@ -180,7 +187,7 @@ public class Utils : MonoBehaviour
 
         //GameObject prueba = GameObject.Find("Prueba").GetComponent<GameObject>();
 
-        ScriptPrueba.instanciaPrueba.recursosTotales = recursosTotales;
+        //ScriptPrueba.instanciaPrueba.recursosTotales = recursosTotales;
 
     }
 
@@ -193,7 +200,7 @@ public class Utils : MonoBehaviour
 
         //GameObject prueba = GameObject.Find("Prueba").GetComponent<GameObject>();
 
-        ScriptPrueba.instanciaPrueba.puntosAscension = puntosAscension;
+        //ScriptPrueba.instanciaPrueba.puntosAscension = puntosAscension;
 
     }
 

@@ -10,6 +10,7 @@ using UnityEngine.UI;
 
 public class GuardarCargar : MonoBehaviour
 {
+    [HideInInspector] public int prestigio = 1;
     //private ContadorRecursos contadorRecursos;
     public static GuardarCargar instancia;
     [HideInInspector] public Juego partida;
@@ -59,7 +60,7 @@ public class GuardarCargar : MonoBehaviour
         }*/
         int cantidadRecursos = Int32.Parse(textoRecurso.text.ToString());
         partida.nivelActual = SceneManager.GetActiveScene().name;
-        partida.nombrePartida = "partida1";
+        partida.nombrePartida = nombreJugador.text;
         partida.recursosActuales = cantidadRecursos;
         recursosTotales = int.Parse(textoRecursoTotal.text.ToString());
         partida.recursosTotales = recursosTotales;
@@ -134,7 +135,7 @@ public class GuardarCargar : MonoBehaviour
         //    partida.mejora3_2_Activada = true;
         //}
 
-
+        partida.prestigio = prestigio;
 
         var serializador = new XmlSerializer(typeof(Juego));
         FileStream stream = new FileStream(rutaAGuardar, FileMode.Create);
@@ -216,6 +217,9 @@ public class GuardarCargar : MonoBehaviour
             //{
 
             //}
+
+            prestigio = partida.prestigio;
+            EdificiosManager.instanciaEdificiosManager.prestigio = partida.prestigio;
 
             Debug.Log("Cargado");
         }

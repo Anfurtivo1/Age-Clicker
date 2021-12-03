@@ -13,7 +13,7 @@ public class MensajesManager : MonoBehaviour
     {
         mensajePopup.SetActive(true);
         mensajeTexto.text = mensaje;
-        animador.SetTrigger("mostrar");
+        animador.SetTrigger("Mostrar");
     }
     
 }
