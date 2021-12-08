@@ -6,6 +6,20 @@ TagManager:
   tags:
   - Mejora1_1
   - GameManager
+  - Mejora2_1
+  - Mejora3_1
+  - Mejora1_2
+  - Mejora2_2
+  - Mejora3_2
+  - Mejora1_3
+  - Mejora2_3
+  - Mejora3_3
+  - Mejora1_4
+  - Mejora2_4
+  - Mejora3_4
+  - Mejora1_5
+  - Mejora2_5
+  - Mejora3_5
   layers:
   - Default
   - TransparentFX

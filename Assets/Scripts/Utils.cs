@@ -13,7 +13,8 @@ public class Utils : MonoBehaviour
     public Text cantidadPuntosAscension;
     public Text recursosTotales;
     public Text nombreJugador;
-    public GameObject panel;
+    public GameObject panelNombre;
+    public GameObject panelDatosHistoricos;
     private string txt;
     public InputField input;
     public Button botonAceptar;
@@ -28,7 +29,7 @@ public class Utils : MonoBehaviour
         Button btn = botonAceptar.GetComponent<Button>();
         btn.onClick.AddListener(cambiarNombre);
         //mostrarMensaje();
-        if (SceneManager.GetActiveScene().name == "Scene 2")
+        if (SceneManager.GetActiveScene().name == "Scene 5")
         {
             mensaje = GameObject.FindGameObjectWithTag("GameManager").GetComponent<MensajesManager>();
 
@@ -38,12 +39,22 @@ public class Utils : MonoBehaviour
     public void cambiarNombre()
     {
         nombreJugador.text = input.text;
-        panel.SetActive(false);
+        panelNombre.SetActive(false);
+    }
+
+    public void mostrarPanelDatosHistoricos()
+    {
+        panelDatosHistoricos.SetActive(true);
+    }
+
+    public void cerrarPanelDatosHistoricos()
+    {
+        panelDatosHistoricos.SetActive(false);
     }
 
     public void mostrarPanelCambiarNombre()
     {
-        panel.SetActive(true);
+        panelNombre.SetActive(true);
     }
 
     public void mostrarMensaje()
@@ -70,10 +81,8 @@ public class Utils : MonoBehaviour
     {
         int totales = int.Parse(recursosTotales.text.ToString());
 
-        if (totales >= 3000)
+        if (totales >= 3000 && SceneManager.GetActiveScene().name == "Scene 1")
         {
-
-            escribirJugadorRanking();
 
             int puntosAscension = int.Parse(cantidadPuntosAscension.text.ToString());
             int recursoTotal = int.Parse(recursosTotales.text.ToString());
@@ -99,7 +108,93 @@ public class Utils : MonoBehaviour
         {
             Debug.Log("No puedes acceder a ese nivel aún");
         }
-        
+
+        if (totales >= 5000 && SceneManager.GetActiveScene().name == "Scene 2")
+        {
+
+            int puntosAscension = int.Parse(cantidadPuntosAscension.text.ToString());
+            int recursoTotal = int.Parse(recursosTotales.text.ToString());
+
+            PlayerPrefs.SetInt("puntosAscension", puntosAscension);
+            PlayerPrefs.SetInt("recursosTotales", recursoTotal);
+
+            //Debug.Log("Se van a guardar: " + puntosAscension+" puntos de ascension");
+            //Debug.Log("Se van a guardar: " + recursoTotal+" recursos totales");
+
+            SceneManager.LoadScene("Scene 3");
+
+            int nuevosPuntosAscension = PlayerPrefs.GetInt("puntosAscension");
+            int nuevosRecursosTotales = PlayerPrefs.GetInt("recursosTotales");
+
+            //Debug.Log("Se han cargado: " + nuevosPuntosAscension +" puntos de ascension");
+            //Debug.Log("Se han cargado: " + nuevosRecursosTotales + " recursos totales");
+
+            //refrescarPuntosAscension(nuevosPuntosAscension);
+            //refrescarRecursosTotales(nuevosRecursosTotales);
+        }
+        else
+        {
+            Debug.Log("No puedes acceder a ese nivel aún");
+        }
+
+        if (totales >= 7000 && SceneManager.GetActiveScene().name == "Scene 3")
+        {
+
+            int puntosAscension = int.Parse(cantidadPuntosAscension.text.ToString());
+            int recursoTotal = int.Parse(recursosTotales.text.ToString());
+
+            PlayerPrefs.SetInt("puntosAscension", puntosAscension);
+            PlayerPrefs.SetInt("recursosTotales", recursoTotal);
+
+            //Debug.Log("Se van a guardar: " + puntosAscension+" puntos de ascension");
+            //Debug.Log("Se van a guardar: " + recursoTotal+" recursos totales");
+
+            SceneManager.LoadScene("Scene 4");
+
+            int nuevosPuntosAscension = PlayerPrefs.GetInt("puntosAscension");
+            int nuevosRecursosTotales = PlayerPrefs.GetInt("recursosTotales");
+
+            //Debug.Log("Se han cargado: " + nuevosPuntosAscension +" puntos de ascension");
+            //Debug.Log("Se han cargado: " + nuevosRecursosTotales + " recursos totales");
+
+            //refrescarPuntosAscension(nuevosPuntosAscension);
+            //refrescarRecursosTotales(nuevosRecursosTotales);
+        }
+        else
+        {
+            Debug.Log("No puedes acceder a ese nivel aún");
+        }
+        if (totales >= 9000 && SceneManager.GetActiveScene().name == "Scene 4")
+        {
+
+            escribirJugadorRanking();
+
+            int puntosAscension = int.Parse(cantidadPuntosAscension.text.ToString());
+            int recursoTotal = int.Parse(recursosTotales.text.ToString());
+
+            PlayerPrefs.SetInt("puntosAscension", puntosAscension);
+            PlayerPrefs.SetInt("recursosTotales", recursoTotal);
+
+            //Debug.Log("Se van a guardar: " + puntosAscension+" puntos de ascension");
+            //Debug.Log("Se van a guardar: " + recursoTotal+" recursos totales");
+
+            SceneManager.LoadScene("Scene 5");
+
+            int nuevosPuntosAscension = PlayerPrefs.GetInt("puntosAscension");
+            int nuevosRecursosTotales = PlayerPrefs.GetInt("recursosTotales");
+
+            //Debug.Log("Se han cargado: " + nuevosPuntosAscension +" puntos de ascension");
+            //Debug.Log("Se han cargado: " + nuevosRecursosTotales + " recursos totales");
+
+            //refrescarPuntosAscension(nuevosPuntosAscension);
+            //refrescarRecursosTotales(nuevosRecursosTotales);
+        }
+        else
+        {
+            Debug.Log("No puedes acceder a ese nivel aún");
+        }
+
+
     }
 
     private void obtenerJugadoresRanking()
@@ -164,7 +259,7 @@ public class Utils : MonoBehaviour
         //PlayerPrefs.SetInt("puntosAscension", puntosAscension);
         //Debug.Log("Se van a guardar: " + puntosAscension);
 
-        //SceneManager.LoadScene("Scene 1");
+        SceneManager.LoadScene("Scene 1");
 
         //int nuevosPuntosAscension = PlayerPrefs.GetInt("puntosAscension");
         //Debug.Log("Se han cargado: " + nuevosPuntosAscension);

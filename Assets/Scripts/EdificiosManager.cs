@@ -92,7 +92,7 @@ public class EdificiosManager : MonoBehaviour
 
                 recursoTotales.text = "" + recursoTotal;
 
-                Debug.Log("Los recursos totales son: "+ sumaTotal);
+                //Debug.Log("Los recursos totales son: "+ sumaTotal);
 
                 cantidadSiguienteAscension = cantidadSiguienteAscension - sumaTotal;
 
@@ -109,6 +109,165 @@ public class EdificiosManager : MonoBehaviour
 
         //Nivel 2---------------------------------------------
         if (SceneManager.GetActiveScene().name == "Scene 2")//TODO
+        {
+
+            edificios1 = int.Parse(contadorEdificios1.text.ToString());
+            edificios2 = int.Parse(contadorEdificios2.text.ToString());
+            edificios3 = int.Parse(contadorEdificios3.text.ToString());
+            edificios4 = int.Parse(contadorEdificios4.text.ToString());
+            edificios5 = int.Parse(contadorEdificios5.text.ToString());
+
+            if (edificios1 > 0 || edificios2 > 0 || edificios3 > 0 || edificios4 > 0 || edificios5 > 0)
+            {
+
+                edificios1 = edificios1 * prestigio * poderEdificio1;
+                edificios2 = edificios2 * prestigio * poderEdificio2;
+                edificios3 = edificios3 * prestigio * poderEdificio3;
+                edificios4 = edificios4 * prestigio * poderEdificio4;
+                edificios5 = edificios5 * prestigio * poderEdificio5;
+
+                int sumaTotal = (edificios1 + edificios2 + edificios3 + edificios4 + edificios5);
+
+
+
+
+                int recursoActual = int.Parse(recursosActuales.text.ToString());
+                recursoActual = sumaTotal + recursoActual;
+
+                recursosActuales.text = "" + recursoActual;
+                GuardarCargar.instancia.partida.recursosActuales = GuardarCargar.instancia.partida.recursosActuales + sumaTotal;
+
+
+
+
+                int recursoTotal = int.Parse(recursoTotales.text.ToString());
+                recursoTotal = sumaTotal + recursoTotal;
+
+                recursoTotales.text = "" + recursoTotal;
+
+                //Debug.Log("Los recursos totales son: "+ sumaTotal);
+
+                cantidadSiguienteAscension = cantidadSiguienteAscension - sumaTotal;
+
+                if (cantidadSiguienteAscension <= 0)
+                {
+                    puntosIniciales = puntosIniciales + 1000;
+                    cantidadSiguienteAscension = puntosIniciales;
+                    int puntos = int.Parse(numeroPuntosPrestigio.text.ToString());
+                    puntos++;
+                    numeroPuntosPrestigio.text = "" + puntos;
+                }
+            }
+        }
+
+        //Nivel 3---------------------------------------------
+        if (SceneManager.GetActiveScene().name == "Scene 3")//TODO
+        {
+
+            edificios1 = int.Parse(contadorEdificios1.text.ToString());
+            edificios2 = int.Parse(contadorEdificios2.text.ToString());
+            edificios3 = int.Parse(contadorEdificios3.text.ToString());
+            edificios4 = int.Parse(contadorEdificios4.text.ToString());
+            edificios5 = int.Parse(contadorEdificios5.text.ToString());
+
+            if (edificios1 > 0 || edificios2 > 0 || edificios3 > 0 || edificios4 > 0 || edificios5 > 0)
+            {
+
+                edificios1 = edificios1 * prestigio * poderEdificio1;
+                edificios2 = edificios2 * prestigio * poderEdificio2;
+                edificios3 = edificios3 * prestigio * poderEdificio3;
+                edificios4 = edificios4 * prestigio * poderEdificio4;
+                edificios5 = edificios5 * prestigio * poderEdificio5;
+
+                int sumaTotal = (edificios1 + edificios2 + edificios3 + edificios4 + edificios5);
+
+
+
+
+                int recursoActual = int.Parse(recursosActuales.text.ToString());
+                recursoActual = sumaTotal + recursoActual;
+
+                recursosActuales.text = "" + recursoActual;
+                GuardarCargar.instancia.partida.recursosActuales = GuardarCargar.instancia.partida.recursosActuales + sumaTotal;
+
+
+
+
+                int recursoTotal = int.Parse(recursoTotales.text.ToString());
+                recursoTotal = sumaTotal + recursoTotal;
+
+                recursoTotales.text = "" + recursoTotal;
+
+                //Debug.Log("Los recursos totales son: "+ sumaTotal);
+
+                cantidadSiguienteAscension = cantidadSiguienteAscension - sumaTotal;
+
+                if (cantidadSiguienteAscension <= 0)
+                {
+                    puntosIniciales = puntosIniciales + 1000;
+                    cantidadSiguienteAscension = puntosIniciales;
+                    int puntos = int.Parse(numeroPuntosPrestigio.text.ToString());
+                    puntos++;
+                    numeroPuntosPrestigio.text = "" + puntos;
+                }
+            }
+        }
+
+        //Nivel 4---------------------------------------------
+        if (SceneManager.GetActiveScene().name == "Scene 4")//TODO
+        {
+
+            edificios1 = int.Parse(contadorEdificios1.text.ToString());
+            edificios2 = int.Parse(contadorEdificios2.text.ToString());
+            edificios3 = int.Parse(contadorEdificios3.text.ToString());
+            edificios4 = int.Parse(contadorEdificios4.text.ToString());
+            edificios5 = int.Parse(contadorEdificios5.text.ToString());
+
+            if (edificios1 > 0 || edificios2 > 0 || edificios3 > 0 || edificios4 > 0 || edificios5 > 0)
+            {
+
+                edificios1 = edificios1 * prestigio * poderEdificio1;
+                edificios2 = edificios2 * prestigio * poderEdificio2;
+                edificios3 = edificios3 * prestigio * poderEdificio3;
+                edificios4 = edificios4 * prestigio * poderEdificio4;
+                edificios5 = edificios5 * prestigio * poderEdificio5;
+
+                int sumaTotal = (edificios1 + edificios2 + edificios3 + edificios4 + edificios5);
+
+
+
+
+                int recursoActual = int.Parse(recursosActuales.text.ToString());
+                recursoActual = sumaTotal + recursoActual;
+
+                recursosActuales.text = "" + recursoActual;
+                GuardarCargar.instancia.partida.recursosActuales = GuardarCargar.instancia.partida.recursosActuales + sumaTotal;
+
+
+
+
+                int recursoTotal = int.Parse(recursoTotales.text.ToString());
+                recursoTotal = sumaTotal + recursoTotal;
+
+                recursoTotales.text = "" + recursoTotal;
+
+                //Debug.Log("Los recursos totales son: "+ sumaTotal);
+
+                cantidadSiguienteAscension = cantidadSiguienteAscension - sumaTotal;
+
+                if (cantidadSiguienteAscension <= 0)
+                {
+                    puntosIniciales = puntosIniciales + 1000;
+                    cantidadSiguienteAscension = puntosIniciales;
+                    int puntos = int.Parse(numeroPuntosPrestigio.text.ToString());
+                    puntos++;
+                    numeroPuntosPrestigio.text = "" + puntos;
+                }
+            }
+        }
+
+        //Nivel 5---------------------------------------------
+        if (SceneManager.GetActiveScene().name == "Scene 5")//TODO
         {
 
             edificios1 = int.Parse(contadorEdificios1.text.ToString());
