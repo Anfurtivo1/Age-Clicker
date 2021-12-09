@@ -89,19 +89,26 @@ public class GuardarCargar : MonoBehaviour
 
         int costeEdificiosTier5 = int.Parse(costeEdifTier5.text.ToString());
 
+        Edificios edificio = new Edificios(edificiosTier1, edificiosTier2, edificiosTier3, edificiosTier4, edificiosTier5, 
+            costeEdificiosTier1, costeEdificiosTier2, costeEdificiosTier3, costeEdificiosTier4, costeEdificiosTier5);
+
+        partida.edificios = edificio;
+
         partida.nivelPrestigio = cantidadAscension;
         partida.cantidadSiguienteNivelAscension = cantidadSiguienteAscension;
-        partida.edificiosTier1 = edificiosTier1;
-        partida.edificiosTier2 = edificiosTier2;
-        partida.edificiosTier3 = edificiosTier3;
-        partida.edificiosTier4 = edificiosTier4;
-        partida.edificiosTier5 = edificiosTier5;
+        //partida.edificiosTier1 = edificiosTier1;
+        //partida.edificiosTier2 = edificiosTier2;
+        //partida.edificiosTier3 = edificiosTier3;
+        //partida.edificiosTier4 = edificiosTier4;
+        //partida.edificiosTier5 = edificiosTier5;
 
-        partida.costeEdificiosTier1 = costeEdificiosTier1;
-        partida.costeEdificiosTier2 = costeEdificiosTier2;
-        partida.costeEdificiosTier3 = costeEdificiosTier3;
-        partida.costeEdificiosTier4 = costeEdificiosTier4;
-        partida.costeEdificiosTier5 = costeEdificiosTier5;
+        //partida.costeEdificiosTier1 = costeEdificiosTier1;
+        //partida.costeEdificiosTier2 = costeEdificiosTier2;
+        //partida.costeEdificiosTier3 = costeEdificiosTier3;
+        //partida.costeEdificiosTier4 = costeEdificiosTier4;
+        //partida.costeEdificiosTier5 = costeEdificiosTier5;
+
+        Mejoras mejora = new Mejoras();
 
         if (SceneManager.GetActiveScene().name =="Scene 1")
         {
@@ -109,21 +116,21 @@ public class GuardarCargar : MonoBehaviour
 
             if (!boton.interactable)
             {
-                partida.mejora1_1_Activada = true;
+                mejora.mejora1_1_Activada = true;
             }
 
             boton = GameObject.FindGameObjectWithTag("Mejora2_1").GetComponent<Button>();
 
             if (!boton.interactable)
             {
-                partida.mejora2_1_Activada = true;
+                mejora.mejora2_1_Activada = true;
             }
 
             boton = GameObject.FindGameObjectWithTag("Mejora3_1").GetComponent<Button>();
 
             if (!boton.interactable)
             {
-                partida.mejora3_1_Activada = true;
+                mejora.mejora3_1_Activada = true;
             }
         }
 
@@ -135,21 +142,21 @@ public class GuardarCargar : MonoBehaviour
 
             if (!boton.interactable)
             {
-                partida.mejora1_2_Activada = true;
+                mejora.mejora1_2_Activada = true;
             }
 
             boton = GameObject.FindGameObjectWithTag("Mejora2_2").GetComponent<Button>();
 
             if (!boton.interactable)
             {
-                partida.mejora2_2_Activada = true;
+                mejora.mejora2_2_Activada = true;
             }
 
             boton = GameObject.FindGameObjectWithTag("Mejora3_2").GetComponent<Button>();
 
             if (!boton.interactable)
             {
-                partida.mejora3_2_Activada = true;
+                mejora.mejora3_2_Activada = true;
             }
         }
 
@@ -159,21 +166,21 @@ public class GuardarCargar : MonoBehaviour
 
             if (!boton.interactable)
             {
-                partida.mejora1_3_Activada = true;
+                mejora.mejora1_3_Activada = true;
             }
 
             boton = GameObject.FindGameObjectWithTag("Mejora2_3").GetComponent<Button>();
 
             if (!boton.interactable)
             {
-                partida.mejora2_3_Activada = true;
+                mejora.mejora2_3_Activada = true;
             }
 
             boton = GameObject.FindGameObjectWithTag("Mejora3_3").GetComponent<Button>();
 
             if (!boton.interactable)
             {
-                partida.mejora3_3_Activada = true;
+                mejora.mejora3_3_Activada = true;
             }
         }
 
@@ -183,21 +190,21 @@ public class GuardarCargar : MonoBehaviour
 
             if (!boton.interactable)
             {
-                partida.mejora1_4_Activada = true;
+                mejora.mejora1_4_Activada = true;
             }
 
             boton = GameObject.FindGameObjectWithTag("Mejora2_4").GetComponent<Button>();
 
             if (!boton.interactable)
             {
-                partida.mejora2_4_Activada = true;
+                mejora.mejora2_4_Activada = true;
             }
 
             boton = GameObject.FindGameObjectWithTag("Mejora3_4").GetComponent<Button>();
 
             if (!boton.interactable)
             {
-                partida.mejora3_4_Activada = true;
+                mejora.mejora3_4_Activada = true;
             }
         }
 
@@ -207,23 +214,25 @@ public class GuardarCargar : MonoBehaviour
 
             if (!boton.interactable)
             {
-                partida.mejora1_5_Activada = true;
+                mejora.mejora1_5_Activada = true;
             }
 
             boton = GameObject.FindGameObjectWithTag("Mejora2_5").GetComponent<Button>();
 
             if (!boton.interactable)
             {
-                partida.mejora2_5_Activada = true;
+                mejora.mejora2_5_Activada = true;
             }
 
             boton = GameObject.FindGameObjectWithTag("Mejora3_5").GetComponent<Button>();
 
             if (!boton.interactable)
             {
-                partida.mejora3_5_Activada = true;
+                mejora.mejora3_5_Activada = true;
             }
         }
+
+        partida.mejoras = mejora;
 
         partida.prestigio = prestigio;
 
@@ -237,6 +246,7 @@ public class GuardarCargar : MonoBehaviour
 
     public void cargarPartida()
     {
+        partida.nombrePartida = nombreJugador.text;
         rutaAGuardar = Application.persistentDataPath + "/" + partida.nombrePartida + ".aock";
         Debug.Log(rutaAGuardar);
         if (File.Exists(rutaAGuardar))
@@ -256,125 +266,125 @@ public class GuardarCargar : MonoBehaviour
             recursosTotales = partida.recursosTotales;
             textoRecursoTotal.text = recursosTotales.ToString();
 
-            cantidadEdificiosTier1.text =""+partida.edificiosTier1;
+            cantidadEdificiosTier1.text =""+partida.edificios.edificiosTier1;
 
-            costeEdifTier1.text = "" + partida.costeEdificiosTier1;
+            costeEdifTier1.text = "" + partida.edificios.costeEdificiosTier1;
 
-            cantidadEdificiosTier2.text = "" + partida.edificiosTier2;
+            cantidadEdificiosTier2.text = "" + partida.edificios.edificiosTier2;
 
-            costeEdifTier2.text = "" + partida.costeEdificiosTier2;
+            costeEdifTier2.text = "" + partida.edificios.costeEdificiosTier2;
 
-            cantidadEdificiosTier3.text = "" + partida.edificiosTier3;
+            cantidadEdificiosTier3.text = "" + partida.edificios.edificiosTier3;
 
-            costeEdifTier3.text = "" + partida.costeEdificiosTier3;
+            costeEdifTier3.text = "" + partida.edificios.costeEdificiosTier3;
 
-            cantidadEdificiosTier4.text = "" + partida.edificiosTier4;
+            cantidadEdificiosTier4.text = "" + partida.edificios.edificiosTier4;
 
-            costeEdifTier4.text = "" + partida.costeEdificiosTier4;
+            costeEdifTier4.text = "" + partida.edificios.costeEdificiosTier4;
 
-            cantidadEdificiosTier5.text = "" + partida.edificiosTier5;
+            cantidadEdificiosTier5.text = "" + partida.edificios.edificiosTier5;
 
-            costeEdifTier5.text = "" + partida.costeEdificiosTier5;
+            costeEdifTier5.text = "" + partida.edificios.costeEdificiosTier5;
 
-            if (partida.mejora1_1_Activada && partida.nivelActual == "Scene 1")
+            if (partida.mejoras.mejora1_1_Activada && partida.nivelActual == "Scene 1")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora1_1").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 5;
                 boton.interactable = false;
             }
 
-            if (partida.mejora2_1_Activada && partida.nivelActual == "Scene 1")
+            if (partida.mejoras.mejora2_1_Activada && partida.nivelActual == "Scene 1")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora2_1").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 15;
                 boton.interactable = false;
             }
 
-            if (partida.mejora3_1_Activada && partida.nivelActual == "Scene 1")
+            if (partida.mejoras.mejora3_1_Activada && partida.nivelActual == "Scene 1")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora3_1").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 25;
                 boton.interactable = false;
             }
 
-            if (partida.mejora1_2_Activada && partida.nivelActual == "Scene 2")
+            if (partida.mejoras.mejora1_2_Activada && partida.nivelActual == "Scene 2")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora1_2").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 6;
                 boton.interactable = false;
             }
 
-            if (partida.mejora2_2_Activada && partida.nivelActual == "Scene 2")
+            if (partida.mejoras.mejora2_2_Activada && partida.nivelActual == "Scene 2")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora2_2").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 18;
                 boton.interactable = false;
             }
 
-            if (partida.mejora3_2_Activada && partida.nivelActual == "Scene 2")
+            if (partida.mejoras.mejora3_2_Activada && partida.nivelActual == "Scene 2")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora3_2").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 30;
                 boton.interactable = false;
             }
 
-            if (partida.mejora1_3_Activada && partida.nivelActual == "Scene 3")
+            if (partida.mejoras.mejora1_3_Activada && partida.nivelActual == "Scene 3")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora1_3").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 7;
                 boton.interactable = false;
             }
 
-            if (partida.mejora2_3_Activada && partida.nivelActual == "Scene 3")
+            if (partida.mejoras.mejora2_3_Activada && partida.nivelActual == "Scene 3")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora2_3").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 21;
                 boton.interactable = false;
             }
 
-            if (partida.mejora3_3_Activada && partida.nivelActual == "Scene 3")
+            if (partida.mejoras.mejora3_3_Activada && partida.nivelActual == "Scene 3")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora3_3").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 35;
                 boton.interactable = false;
             }
 
-            if (partida.mejora1_4_Activada && partida.nivelActual == "Scene 4")
+            if (partida.mejoras.mejora1_4_Activada && partida.nivelActual == "Scene 4")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora1_4").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 8;
                 boton.interactable = false;
             }
 
-            if (partida.mejora2_4_Activada && partida.nivelActual == "Scene 4")
+            if (partida.mejoras.mejora2_4_Activada && partida.nivelActual == "Scene 4")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora2_4").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 24;
                 boton.interactable = false;
             }
 
-            if (partida.mejora3_4_Activada && partida.nivelActual == "Scene 4")
+            if (partida.mejoras.mejora3_4_Activada && partida.nivelActual == "Scene 4")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora3_4").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 40;
                 boton.interactable = false;
             }
 
-            if (partida.mejora1_5_Activada && partida.nivelActual == "Scene 5")
+            if (partida.mejoras.mejora1_5_Activada && partida.nivelActual == "Scene 5")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora1_5").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 9;
                 boton.interactable = false;
             }
 
-            if (partida.mejora2_5_Activada && partida.nivelActual == "Scene 5")
+            if (partida.mejoras.mejora2_5_Activada && partida.nivelActual == "Scene 5")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora2_5").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 27;
                 boton.interactable = false;
             }
 
-            if (partida.mejora3_5_Activada && partida.nivelActual == "Scene 5")
+            if (partida.mejoras.mejora3_5_Activada && partida.nivelActual == "Scene 5")
             {
                 Button boton = GameObject.FindGameObjectWithTag("Mejora3_5").GetComponent<Button>();
                 EdificiosManager.instanciaEdificiosManager.poderEdificio1 = 45;

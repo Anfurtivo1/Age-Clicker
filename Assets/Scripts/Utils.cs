@@ -7,6 +7,7 @@ using Firebase.Firestore;
 using System;
 using System.Threading.Tasks;
 using Firebase.Extensions;
+using TMPro;
 
 public class Utils : MonoBehaviour
 {
@@ -15,7 +16,6 @@ public class Utils : MonoBehaviour
     public Text nombreJugador;
     public GameObject panelNombre;
     public GameObject panelDatosHistoricos;
-    private string txt;
     public InputField input;
     public Button botonAceptar;
     static FirebaseFirestore db;
@@ -23,6 +23,7 @@ public class Utils : MonoBehaviour
     public String mensajeMostrar;
     private MensajesManager mensaje;
     private bool accesoFirebase = false;
+    public GameObject panelRanking;
 
     public void Start()
     {
@@ -50,6 +51,11 @@ public class Utils : MonoBehaviour
     public void cerrarPanelDatosHistoricos()
     {
         panelDatosHistoricos.SetActive(false);
+    }
+
+    public void cerrarPanelRanking()
+    {
+        panelRanking.SetActive(false);
     }
 
     public void mostrarPanelCambiarNombre()
@@ -217,6 +223,7 @@ public class Utils : MonoBehaviour
                 //Debug.Log("Recursos Totales: "+documentDictionary["Recursos Totales"]);
                 //Debug.Log("");
             }
+            
             mensaje = GameObject.FindGameObjectWithTag("GameManager").GetComponent<MensajesManager>();
             mensaje.mostrarMensaje(mensajeMostrar);
         });

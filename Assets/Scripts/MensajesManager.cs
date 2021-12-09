@@ -2,18 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MensajesManager : MonoBehaviour
 {
     public GameObject mensajePopup;
     public Animator animador;
-    public TMP_Text mensajeTexto;
+    public Text mensajeTexto;
+    public GameObject panelRanking;
 
     public void mostrarMensaje(string mensaje)
     {
-        mensajePopup.SetActive(true);
+        panelRanking.SetActive(true);
         mensajeTexto.text = mensaje;
-        animador.SetTrigger("Mostrar");
+        //animador.SetTrigger("Mostrar");
     }
     
 }
