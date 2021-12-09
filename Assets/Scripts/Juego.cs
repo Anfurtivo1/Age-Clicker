@@ -11,6 +11,8 @@ public class Juego
     public int nivelPrestigio;
     public string nivelActual;
 
+    Edificios edificios;
+
     public int edificiosTier1;
     public int edificiosTier2;
     public int edificiosTier3;
@@ -22,6 +24,8 @@ public class Juego
     public int costeEdificiosTier3;
     public int costeEdificiosTier4;
     public int costeEdificiosTier5;
+
+    Mejoras mejoras;
 
     public bool mejora1_1_Activada;
     public bool mejora2_1_Activada;

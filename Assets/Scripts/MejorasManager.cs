@@ -32,7 +32,7 @@ public class MejorasManager : MonoBehaviour
         {
             int recursoActual = int.Parse(recursosActuales.text.ToString());
 
-            if (recursoActual >= 100)
+            if (recursoActual >= 400)
             {
                 Debug.Log("Has comprado la mejora 1");
                 Button boton = GameObject.FindGameObjectWithTag("Mejora1_2").GetComponent<Button>();
@@ -50,7 +50,7 @@ public class MejorasManager : MonoBehaviour
         {
             int recursoActual = int.Parse(recursosActuales.text.ToString());
 
-            if (recursoActual >= 100)
+            if (recursoActual >= 700)
             {
                 Debug.Log("Has comprado la mejora 1");
                 Button boton = GameObject.FindGameObjectWithTag("Mejora1_3").GetComponent<Button>();
@@ -68,7 +68,7 @@ public class MejorasManager : MonoBehaviour
         {
             int recursoActual = int.Parse(recursosActuales.text.ToString());
 
-            if (recursoActual >= 100)
+            if (recursoActual >= 1000)
             {
                 Debug.Log("Has comprado la mejora 1");
                 Button boton = GameObject.FindGameObjectWithTag("Mejora1_4").GetComponent<Button>();
@@ -86,7 +86,7 @@ public class MejorasManager : MonoBehaviour
         {
             int recursoActual = int.Parse(recursosActuales.text.ToString());
 
-            if (recursoActual >= 100)
+            if (recursoActual >= 1300)
             {
                 Debug.Log("Has comprado la mejora 1");
                 Button boton = GameObject.FindGameObjectWithTag("Mejora1_5").GetComponent<Button>();
@@ -126,7 +126,7 @@ public class MejorasManager : MonoBehaviour
         {
             int recursoActual = int.Parse(recursosActuales.text.ToString());
 
-            if (recursoActual >= 200)
+            if (recursoActual >= 500)
             {
                 Debug.Log("Has comprado la mejora 2");
                 Button boton = GameObject.FindGameObjectWithTag("Mejora2_2").GetComponent<Button>();
@@ -144,7 +144,7 @@ public class MejorasManager : MonoBehaviour
         {
             int recursoActual = int.Parse(recursosActuales.text.ToString());
 
-            if (recursoActual >= 200)
+            if (recursoActual >= 800)
             {
                 Debug.Log("Has comprado la mejora 2");
                 Button boton = GameObject.FindGameObjectWithTag("Mejora2_3").GetComponent<Button>();
@@ -162,7 +162,7 @@ public class MejorasManager : MonoBehaviour
         {
             int recursoActual = int.Parse(recursosActuales.text.ToString());
 
-            if (recursoActual >= 200)
+            if (recursoActual >= 1100)
             {
                 Debug.Log("Has comprado la mejora 2");
                 Button boton = GameObject.FindGameObjectWithTag("Mejora2_4").GetComponent<Button>();
@@ -180,7 +180,7 @@ public class MejorasManager : MonoBehaviour
         {
             int recursoActual = int.Parse(recursosActuales.text.ToString());
 
-            if (recursoActual >= 200)
+            if (recursoActual >= 1400)
             {
                 Debug.Log("Has comprado la mejora 2");
                 Button boton = GameObject.FindGameObjectWithTag("Mejora2_5").GetComponent<Button>();
@@ -220,7 +220,7 @@ public class MejorasManager : MonoBehaviour
         {
             int recursoActual = int.Parse(recursosActuales.text.ToString());
 
-            if (recursoActual >= 300)
+            if (recursoActual >= 600)
             {
                 Debug.Log("Has comprado la mejora 3");
                 Button boton = GameObject.FindGameObjectWithTag("Mejora3_2").GetComponent<Button>();
@@ -238,7 +238,7 @@ public class MejorasManager : MonoBehaviour
         {
             int recursoActual = int.Parse(recursosActuales.text.ToString());
 
-            if (recursoActual >= 300)
+            if (recursoActual >= 900)
             {
                 Debug.Log("Has comprado la mejora 3");
                 Button boton = GameObject.FindGameObjectWithTag("Mejora3_3").GetComponent<Button>();
@@ -256,7 +256,7 @@ public class MejorasManager : MonoBehaviour
         {
             int recursoActual = int.Parse(recursosActuales.text.ToString());
 
-            if (recursoActual >= 300)
+            if (recursoActual >= 1200)
             {
                 Debug.Log("Has comprado la mejora 3");
                 Button boton = GameObject.FindGameObjectWithTag("Mejora3_4").GetComponent<Button>();
@@ -274,7 +274,7 @@ public class MejorasManager : MonoBehaviour
         {
             int recursoActual = int.Parse(recursosActuales.text.ToString());
 
-            if (recursoActual >= 300)
+            if (recursoActual >= 1500)
             {
                 Debug.Log("Has comprado la mejora 3");
                 Button boton = GameObject.FindGameObjectWithTag("Mejora3_5").GetComponent<Button>();

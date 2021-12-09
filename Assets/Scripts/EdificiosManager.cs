@@ -305,7 +305,7 @@ public class EdificiosManager : MonoBehaviour
                 recursoTotales.text = "" + recursoTotal;
 
 
-                cantidadSiguienteAscension = cantidadSiguienteAscension - recursoTotal;
+                cantidadSiguienteAscension = cantidadSiguienteAscension - recursoTotal;//Se resta a la cantidad la cantidad de recursos totales que se haya ganado a lo largo de la partida
 
                 if (cantidadSiguienteAscension <= 0)
                 {
@@ -445,120 +445,120 @@ public class EdificiosManager : MonoBehaviour
         }
     }
 
-    //Nivel 2----------------------------------------------
-    public void comprarEdificio1_2()
-    {
+    ////Nivel 2----------------------------------------------
+    //public void comprarEdificio1_2()
+    //{
 
-    }
-
-
-    public void comprarEdificio2_2()
-    {
-
-    }
+    //}
 
 
-    public void comprarEdificio3_2()
-    {
+    //public void comprarEdificio2_2()
+    //{
 
-    }
-
-
-    public void comprarEdificio4_2()
-    {
-
-    }
-
-    public void comprarEdificio5_2()
-    {
-
-    }
-
-    //Nivel 3----------------------------------------------
-    public void comprarEdificio1_3()
-    {
-
-    }
+    //}
 
 
-    public void comprarEdificio2_3()
-    {
+    //public void comprarEdificio3_2()
+    //{
 
-    }
-
-
-    public void comprarEdificio3_3()
-    {
-
-    }
+    //}
 
 
-    public void comprarEdificio4_3()
-    {
+    //public void comprarEdificio4_2()
+    //{
 
-    }
+    //}
 
-    public void comprarEdificio5_3()
-    {
+    //public void comprarEdificio5_2()
+    //{
 
-    }
+    //}
 
-    //Nivel 4----------------------------------------------
-    public void comprarEdificio1_4()
-    {
+    ////Nivel 3----------------------------------------------
+    //public void comprarEdificio1_3()
+    //{
 
-    }
-
-
-    public void comprarEdificio2_4()
-    {
-
-    }
+    //}
 
 
-    public void comprarEdificio3_4()
-    {
+    //public void comprarEdificio2_3()
+    //{
 
-    }
-
-
-    public void comprarEdificio4_4()
-    {
-
-    }
-
-    public void comprarEdificio5_4()
-    {
-
-    }
-
-    //Nivel 5----------------------------------------------
-    public void comprarEdificio1_5()
-    {
-
-    }
+    //}
 
 
-    public void comprarEdificio2_5()
-    {
+    //public void comprarEdificio3_3()
+    //{
 
-    }
-
-
-    public void comprarEdificio3_5()
-    {
-
-    }
+    //}
 
 
-    public void comprarEdificio4_5()
-    {
+    //public void comprarEdificio4_3()
+    //{
 
-    }
+    //}
 
-    public void comprarEdificio5_5()
-    {
+    //public void comprarEdificio5_3()
+    //{
 
-    }
+    //}
+
+    ////Nivel 4----------------------------------------------
+    //public void comprarEdificio1_4()
+    //{
+
+    //}
+
+
+    //public void comprarEdificio2_4()
+    //{
+
+    //}
+
+
+    //public void comprarEdificio3_4()
+    //{
+
+    //}
+
+
+    //public void comprarEdificio4_4()
+    //{
+
+    //}
+
+    //public void comprarEdificio5_4()
+    //{
+
+    //}
+
+    ////Nivel 5----------------------------------------------
+    //public void comprarEdificio1_5()
+    //{
+
+    //}
+
+
+    //public void comprarEdificio2_5()
+    //{
+
+    //}
+
+
+    //public void comprarEdificio3_5()
+    //{
+
+    //}
+
+
+    //public void comprarEdificio4_5()
+    //{
+
+    //}
+
+    //public void comprarEdificio5_5()
+    //{
+
+    //}
 
 }
