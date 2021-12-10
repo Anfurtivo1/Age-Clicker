@@ -25,6 +25,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 1");
+                Utils.MostrarMensajeNoComprarMejora1();
             }
         }
 
@@ -43,6 +44,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 1");
+                Utils.MostrarMensajeNoComprarMejora1();
             }
         }
 
@@ -61,6 +63,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 1");
+                Utils.MostrarMensajeNoComprarMejora1();
             }
         }
 
@@ -79,6 +82,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 1");
+                Utils.MostrarMensajeNoComprarMejora1();
             }
         }
 
@@ -97,6 +101,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 1");
+                Utils.MostrarMensajeNoComprarMejora1();
             }
         }
 
@@ -119,6 +124,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 2");
+                Utils.MostrarMensajeNoComprarMejora2();
             }
         }
 
@@ -137,6 +143,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 2");
+                Utils.MostrarMensajeNoComprarMejora2();
             }
         }
 
@@ -155,6 +162,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 2");
+                Utils.MostrarMensajeNoComprarMejora2();
             }
         }
 
@@ -173,6 +181,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 2");
+                Utils.MostrarMensajeNoComprarMejora2();
             }
         }
 
@@ -191,6 +200,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 2");
+                Utils.MostrarMensajeNoComprarMejora2();
             }
         }
 
@@ -213,6 +223,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 3");
+                Utils.MostrarMensajeNoComprarMejora3();
             }
         }
 
@@ -231,6 +242,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 3");
+                Utils.MostrarMensajeNoComprarMejora3();
             }
         }
 
@@ -249,6 +261,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 3");
+                Utils.MostrarMensajeNoComprarMejora3();
             }
         }
 
@@ -267,6 +280,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 3");
+                Utils.MostrarMensajeNoComprarMejora3();
             }
         }
 
@@ -285,6 +299,7 @@ public class MejorasManager : MonoBehaviour
             else
             {
                 Debug.Log("No has podido comprar la mejora 3");
+                Utils.MostrarMensajeNoComprarMejora3();
             }
         }
 

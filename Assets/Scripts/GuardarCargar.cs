@@ -54,10 +54,7 @@ public class GuardarCargar : MonoBehaviour
         partida.nombrePartida = nombreJugador.text;
         rutaAGuardar = Application.persistentDataPath+"/" + partida.nombrePartida+".aock";//Como va a ser multiplataforma, usamos esto
 
-        /*if (File.Exists(rutaAGuardar))
-        {
-            Si el archivo existe, preguntar si se quiere sobreescribir, en caso afirmativo, se sobreescribe
-        }*/
+        
         int cantidadRecursos = Int32.Parse(textoRecurso.text.ToString());
         partida.nivelActual = SceneManager.GetActiveScene().name;
         partida.nombrePartida = nombreJugador.text;
@@ -96,17 +93,6 @@ public class GuardarCargar : MonoBehaviour
 
         partida.nivelPrestigio = cantidadAscension;
         partida.cantidadSiguienteNivelAscension = cantidadSiguienteAscension;
-        //partida.edificiosTier1 = edificiosTier1;
-        //partida.edificiosTier2 = edificiosTier2;
-        //partida.edificiosTier3 = edificiosTier3;
-        //partida.edificiosTier4 = edificiosTier4;
-        //partida.edificiosTier5 = edificiosTier5;
-
-        //partida.costeEdificiosTier1 = costeEdificiosTier1;
-        //partida.costeEdificiosTier2 = costeEdificiosTier2;
-        //partida.costeEdificiosTier3 = costeEdificiosTier3;
-        //partida.costeEdificiosTier4 = costeEdificiosTier4;
-        //partida.costeEdificiosTier5 = costeEdificiosTier5;
 
         Mejoras mejora = new Mejoras();
 
@@ -240,6 +226,7 @@ public class GuardarCargar : MonoBehaviour
         FileStream stream = new FileStream(rutaAGuardar, FileMode.Create);
         serializador.Serialize(stream, partida);
         stream.Close();
+        //Utils.mostrarMensajeGuardadoConExito();
         Debug.Log("Guardado");
 
     }
@@ -248,7 +235,13 @@ public class GuardarCargar : MonoBehaviour
     {
         partida.nombrePartida = nombreJugador.text;
         rutaAGuardar = Application.persistentDataPath + "/" + partida.nombrePartida + ".aock";
-        Debug.Log(rutaAGuardar);
+       //string[] partidas = Directory.GetFiles(Application.persistentDataPath,"*.aock");
+
+       // foreach (var item in partidas)
+       // {
+       //     Debug.Log(item);
+       // }
+
         if (File.Exists(rutaAGuardar))
         {
             var serializador = new XmlSerializer(typeof(Juego));
@@ -257,7 +250,9 @@ public class GuardarCargar : MonoBehaviour
             stream.Close();
             string nivel = partida.nivelActual;
             //Debug.Log(nivel);
-            SceneManager.LoadScene(nivel);
+            //SceneManager.LoadScene(nivel);
+
+            nombreJugador.text = partida.nombrePartida;
 
             cantidadPuntosAscension.text = ""+partida.nivelPrestigio;
             EdificiosManager.instanciaEdificiosManager.cantidadSiguienteAscension = partida.cantidadSiguienteNivelAscension;
@@ -394,6 +389,7 @@ public class GuardarCargar : MonoBehaviour
             prestigio = partida.prestigio;
             EdificiosManager.instanciaEdificiosManager.prestigio = partida.prestigio;
 
+            //Utils.mostrarMensajeCargadoConExito();
             Debug.Log("Cargado");
         }
     }

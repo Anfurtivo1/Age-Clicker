@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MenuOpciones : MonoBehaviour
 {
-    [SerializeField]Vector2 spacing;
+    [SerializeField]Vector2 spacing;//Para que podamos escribir el vector desde el motor de Unity
     Button botonPrincipal;
     MenuOpcionesItem[] items;
     bool expandido = false;

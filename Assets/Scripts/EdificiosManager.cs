@@ -32,8 +32,6 @@ public class EdificiosManager : MonoBehaviour
     public int cantidadSiguienteAscension = 1000;
     private int puntosIniciales = 1000;
 
-    //public int costeEdificio1 = 10;
-
     public int prestigio = 1;
     int edificios1;
     int edificios2;
@@ -108,7 +106,7 @@ public class EdificiosManager : MonoBehaviour
         }
 
         //Nivel 2---------------------------------------------
-        if (SceneManager.GetActiveScene().name == "Scene 2")//TODO
+        if (SceneManager.GetActiveScene().name == "Scene 2")
         {
 
             edificios1 = int.Parse(contadorEdificios1.text.ToString());
@@ -161,7 +159,7 @@ public class EdificiosManager : MonoBehaviour
         }
 
         //Nivel 3---------------------------------------------
-        if (SceneManager.GetActiveScene().name == "Scene 3")//TODO
+        if (SceneManager.GetActiveScene().name == "Scene 3")
         {
 
             edificios1 = int.Parse(contadorEdificios1.text.ToString());
@@ -214,7 +212,7 @@ public class EdificiosManager : MonoBehaviour
         }
 
         //Nivel 4---------------------------------------------
-        if (SceneManager.GetActiveScene().name == "Scene 4")//TODO
+        if (SceneManager.GetActiveScene().name == "Scene 4")
         {
 
             edificios1 = int.Parse(contadorEdificios1.text.ToString());
@@ -267,7 +265,7 @@ public class EdificiosManager : MonoBehaviour
         }
 
         //Nivel 5---------------------------------------------
-        if (SceneManager.GetActiveScene().name == "Scene 5")//TODO
+        if (SceneManager.GetActiveScene().name == "Scene 5")
         {
 
             edificios1 = int.Parse(contadorEdificios1.text.ToString());
@@ -444,121 +442,5 @@ public class EdificiosManager : MonoBehaviour
             Debug.Log("No puedes comprar el edificio");
         }
     }
-
-    ////Nivel 2----------------------------------------------
-    //public void comprarEdificio1_2()
-    //{
-
-    //}
-
-
-    //public void comprarEdificio2_2()
-    //{
-
-    //}
-
-
-    //public void comprarEdificio3_2()
-    //{
-
-    //}
-
-
-    //public void comprarEdificio4_2()
-    //{
-
-    //}
-
-    //public void comprarEdificio5_2()
-    //{
-
-    //}
-
-    ////Nivel 3----------------------------------------------
-    //public void comprarEdificio1_3()
-    //{
-
-    //}
-
-
-    //public void comprarEdificio2_3()
-    //{
-
-    //}
-
-
-    //public void comprarEdificio3_3()
-    //{
-
-    //}
-
-
-    //public void comprarEdificio4_3()
-    //{
-
-    //}
-
-    //public void comprarEdificio5_3()
-    //{
-
-    //}
-
-    ////Nivel 4----------------------------------------------
-    //public void comprarEdificio1_4()
-    //{
-
-    //}
-
-
-    //public void comprarEdificio2_4()
-    //{
-
-    //}
-
-
-    //public void comprarEdificio3_4()
-    //{
-
-    //}
-
-
-    //public void comprarEdificio4_4()
-    //{
-
-    //}
-
-    //public void comprarEdificio5_4()
-    //{
-
-    //}
-
-    ////Nivel 5----------------------------------------------
-    //public void comprarEdificio1_5()
-    //{
-
-    //}
-
-
-    //public void comprarEdificio2_5()
-    //{
-
-    //}
-
-
-    //public void comprarEdificio3_5()
-    //{
-
-    //}
-
-
-    //public void comprarEdificio4_5()
-    //{
-
-    //}
-
-    //public void comprarEdificio5_5()
-    //{
-
-    //}
 
 }

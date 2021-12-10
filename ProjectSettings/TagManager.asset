@@ -20,6 +20,11 @@ TagManager:
   - Mejora1_5
   - Mejora2_5
   - Mejora3_5
+  - Panel Cargado
+  - Panel Guardado
+  - Panel Mejora1
+  - Panel Mejora2
+  - Panel Mejora3
   layers:
   - Default
   - TransparentFX

@@ -119,95 +119,44 @@ public class Utils : MonoBehaviour
 
 
 
-    public static void MostrarMensajeNoComprarMejora1()
+    public void MostrarMensajeNoComprarMejora1()
     {
-        //GameObject panel;
-        //GameObject[] objetos = GameObject.FindGameObjectWithTag("GameManager").GetComponents<GameObject>();
+        GameObject panel;
+        GameObject[] objetos = GameObject.FindGameObjectWithTag("GameManager").GetComponents<GameObject>();
         
-        //foreach (var item in objetos)
-        //{
-        //    if (item.tag == "Panel Mejora1")
-        //    {
-        //        panel = item;
-        //        panel.SetActive(true);
-        //    }
-        //}
-        
+        foreach (var item in objetos)
+        {
+            if (item.tag == "Panel Mejora1")
+            {
+                panel = item;
+            }
+        }
+        mensajeNoComprarMejora1.SetActive(true);
     }
 
-    public static void MostrarMensajeNoComprarMejora2()
+    public void MostrarMensajeNoComprarMejora2()
     {
-        //GameObject panel;
-        //GameObject[] objetos = GameObject.FindGameObjectWithTag("GameManager").GetComponents<GameObject>();
-
-        //foreach (var item in objetos)
-        //{
-        //    if (item.tag == "Panel Mejora2")
-        //    {
-        //        panel = item;
-        //        panel.SetActive(true);
-        //    }
-        //}
+        mensajeNoComprarMejora2.SetActive(true);
     }
 
-    public static void MostrarMensajeNoComprarMejora3()
+    public void MostrarMensajeNoComprarMejora3()
     {
-        //GameObject panel;
-        //GameObject[] objetos = GameObject.FindGameObjectWithTag("GameManager").GetComponents<GameObject>();
-
-        //foreach (var item in objetos)
-        //{
-        //    if (item.tag == "Panel Mejora3")
-        //    {
-        //        panel = item;
-        //        panel.SetActive(true);
-        //    }
-        //}
+        mensajeNoComprarMejora3.SetActive(true);
     }
 
-    public static void cerrarMensajeNoComprarMejora1()
+    public void cerrarMensajeNoComprarMejora1()
     {
-        //GameObject panel;
-        //GameObject[] objetos = GameObject.FindGameObjectWithTag("GameManager").GetComponents<GameObject>();
-
-        //foreach (var item in objetos)
-        //{
-        //    if (item.tag == "Panel Mejora1")
-        //    {
-        //        panel = item;
-        //        panel.SetActive(false);
-        //    }
-        //}
+        mensajeNoComprarMejora1.SetActive(false);
     }
 
-    public static void cerrarMensajeNoComprarMejora2()
+    public void cerrarMensajeNoComprarMejora2()
     {
-        //GameObject panel;
-        //GameObject[] objetos = GameObject.FindGameObjectWithTag("GameManager").GetComponents<GameObject>();
-
-        //foreach (var item in objetos)
-        //{
-        //    if (item.tag == "Panel Mejora2")
-        //    {
-        //        panel = item;
-        //        panel.SetActive(false);
-        //    }
-        //}
+        mensajeNoComprarMejora2.SetActive(true);
     }
 
     public void cerrarMensajeNoComprarMejora3()
     {
-        //GameObject panel;
-        //GameObject[] objetos = GameObject.FindGameObjectWithTag("GameManager").GetComponents<GameObject>();
-
-        //foreach (var item in objetos)
-        //{
-        //    if (item.tag == "Panel Mejora3")
-        //    {
-        //        panel = item;
-        //        panel.SetActive(false);
-        //    }
-        //}
+        mensajeNoComprarMejora3.SetActive(false);
     }
 
     public void pasarNivel()
