@@ -19,6 +19,7 @@ public class Utils : MonoBehaviour
     public Button botonAceptar;
     static FirebaseFirestore db;
     Dictionary<string, object> puntuacion;
+    Dictionary<string, object> datos;
     public String mensajeMostrar;
     private MensajesManager mensaje;
     private bool accesoFirebase = false;
@@ -359,6 +360,57 @@ public class Utils : MonoBehaviour
             mensaje.mostrarMensaje(mensajeMostrar);
         });
         
+
+    }
+
+    public void obtenerPartidaJugadores()
+    {
+        Juego partida = new Juego();
+        Edificios edificios = new Edificios();
+        Mejoras mejoras = new Mejoras();
+        db = FirebaseFirestore.DefaultInstance;
+        var cargarDatos = db.Collection("Jugadores").GetSnapshotAsync().ContinueWithOnMainThread(task =>
+        {
+            QuerySnapshot snapshot = task.Result;
+            if (task.IsCompleted)
+            {
+                //QuerySnapshot snapshot = task.Result;
+                foreach (DocumentSnapshot datos in snapshot.Documents)
+                {
+                    Dictionary<string, object> documentDictionary = datos.ToDictionary();
+
+                    if (datos.Id == nombreJugador.text)
+                        {
+                            //partida.nombrePartida = document.Id;
+                            partida.cantidadSiguienteNivelAscension = int.Parse("" + documentDictionary["cantidadSiguienteNivelAscension"]);
+                            partida.nivelActual = "" + documentDictionary["nivelActual"];
+                            partida.nivelPrestigio = int.Parse("" + documentDictionary["nivelPrestigio"]);
+                            partida.prestigio = int.Parse("" + documentDictionary["prestigio"]);
+                            partida.recursosActuales = int.Parse("" + documentDictionary["recursosActuales"]);
+                            partida.recursosTotales = int.Parse("" + documentDictionary["recursosTotales"]);
+                        
+
+                            edificios.edificiosTier1 = int.Parse(""+documentDictionary["edificiosTier1"]);
+                            edificios.edificiosTier2 = int.Parse("" + documentDictionary["edificiosTier2"]);
+                            edificios.edificiosTier3 = int.Parse("" + documentDictionary["edificiosTier3"]);
+                            edificios.edificiosTier4 = int.Parse("" + documentDictionary["edificiosTier4"]);
+                            edificios.edificiosTier5 = int.Parse("" + documentDictionary["edificiosTier5"]);
+
+                            edificios.costeEdificiosTier1 = int.Parse("" + documentDictionary["costeEdificiosTier1"]);
+                            edificios.costeEdificiosTier2 = int.Parse("" + documentDictionary["costeEdificiosTier2"]);
+                            edificios.costeEdificiosTier3 = int.Parse("" + documentDictionary["costeEdificiosTier3"]);
+                            edificios.costeEdificiosTier4 = int.Parse("" + documentDictionary["costeEdificiosTier4"]);
+                            edificios.costeEdificiosTier5 = int.Parse("" + documentDictionary["costeEdificiosTier5"]);
+
+                            partida.edificios = edificios;
+
+                            GuardarCargar.instancia.cargarPartida(partida);
+
+                        }
+                }
+            }
+        });
+
 
     }
 
