@@ -369,7 +369,7 @@ public class Utils : MonoBehaviour
         Edificios edificios = new Edificios();
         Mejoras mejoras = new Mejoras();
         db = FirebaseFirestore.DefaultInstance;
-        var cargarDatos = db.Collection("Jugadores").GetSnapshotAsync().ContinueWithOnMainThread(task =>
+        db.Collection("Jugadores").GetSnapshotAsync().ContinueWithOnMainThread(task =>
         {
             QuerySnapshot snapshot = task.Result;
             if (task.IsCompleted)
@@ -403,6 +403,24 @@ public class Utils : MonoBehaviour
                             edificios.costeEdificiosTier5 = int.Parse("" + documentDictionary["costeEdificiosTier5"]);
 
                             partida.edificios = edificios;
+
+                            mejoras.mejora1_1_Activada = bool.Parse("" + documentDictionary["Mejora1_1"]);
+                            mejoras.mejora2_1_Activada = bool.Parse("" + documentDictionary["Mejora2_1"]);
+                            mejoras.mejora3_1_Activada = bool.Parse("" + documentDictionary["Mejora3_1"]);
+                            mejoras.mejora1_2_Activada = bool.Parse("" + documentDictionary["Mejora1_2"]);
+                            mejoras.mejora2_2_Activada = bool.Parse("" + documentDictionary["Mejora2_2"]);
+                            mejoras.mejora3_2_Activada = bool.Parse("" + documentDictionary["Mejora3_2"]);
+                            mejoras.mejora1_3_Activada = bool.Parse("" + documentDictionary["Mejora1_3"]);
+                            mejoras.mejora2_3_Activada = bool.Parse("" + documentDictionary["Mejora2_3"]);
+                            mejoras.mejora3_3_Activada = bool.Parse("" + documentDictionary["Mejora3_3"]);
+                            mejoras.mejora1_4_Activada = bool.Parse("" + documentDictionary["Mejora1_4"]);
+                            mejoras.mejora2_4_Activada = bool.Parse("" + documentDictionary["Mejora2_4"]);
+                            mejoras.mejora3_4_Activada = bool.Parse("" + documentDictionary["Mejora3_4"]);
+                            mejoras.mejora1_5_Activada = bool.Parse("" + documentDictionary["Mejora1_5"]);
+                            mejoras.mejora2_5_Activada = bool.Parse("" + documentDictionary["Mejora2_5"]);
+                            mejoras.mejora3_5_Activada = bool.Parse("" + documentDictionary["Mejora3_5"]);
+
+                            partida.mejoras = mejoras;
 
                             GuardarCargar.instancia.cargarPartida(partida);
 
