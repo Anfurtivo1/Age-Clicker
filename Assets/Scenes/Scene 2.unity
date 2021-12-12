@@ -6429,9 +6429,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 714780560}
-        m_TargetAssemblyTypeName: GuardarCargar, Assembly-CSharp
-        m_MethodName: cargarPartida
+      - m_Target: {fileID: 2103500239}
+        m_TargetAssemblyTypeName: Utils, Scripts
+        m_MethodName: obtenerPartidaJugadores
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
